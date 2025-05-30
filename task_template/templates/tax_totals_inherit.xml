@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- <template id="document_tax_totals_primary_template">
+            <t t-foreach="tax_totals['subtotals']" t-as="subtotal">
+                    <tr class="text-center border-black o_subtotal">
+                        <td style="border-right: 1px solid black;"><strong t-out="subtotal['name']">Untaxed Amount</strong></td>
+                        <td>
+                            <span t-att-class="oe_subtotal_footer_separator" t-out="subtotal['formatted_amount']">27.00</span>
+                        </td>
+                    </tr>
+    
+                    <t t-set="subtotal_to_show" t-value="subtotal['name']"/>
+                    <t t-call="task_template.account_tax_groups_totals_primary_template"/>
+                </t>
+    
+                <tr class="text-center" t-if="'formatted_rounding_amount' in tax_totals and tax_totals['rounding_amount'] != 0">
+                    <td>Rounding</td>
+                    <td>
+                        <span t-out="tax_totals['formatted_rounding_amount']">0</span>
+                    </td>
+                </tr> --> -->
+                
+                <!--Total amount with all taxes-->
+                <!-- <tr class="text-center border-black o_total">
+                    <td style="border-right: 1px solid black;"><strong>Total</strong></td>
+                    <td>
+                        <span t-out="tax_totals['formatted_amount_total']">31.05</span>
+                    </td>
+                </tr>
+        </template> -->
+        
+        <template id="document_tax_totals_template_inherited_task_template" inherit_id="account.document_tax_totals_template">
+            
+            <xpath expr="/t/t[1]/tr" position="replace">
+                <tr class="text-center border-black o_subtotal">
+                    <td style="border-right: 1px solid black;"><strong t-out="subtotal['name']">Untaxed Amount</strong></td>
+
+                    <td>
+                        <span t-att-class="oe_subtotal_footer_separator" t-out="subtotal['formatted_amount']">27.00</span>
+                    </td>
+                </tr>
+            </xpath>
+
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <!-- <xpath expr="/t/t[1]/t[2]" position="attributes">
+                <attribute name="t-call">task_template.tax_groups_totals_inherited_task_template</attribute>
+            </xpath> -->
+
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <xpath expr="/t/tr[1]" position="replace">
+                <tr class="text-center" t-if="'formatted_rounding_amount' in tax_totals and tax_totals['rounding_amount'] != 0">
+                    <td>Rounding</td>
+                    <td>
+                        <span t-out="tax_totals['formatted_rounding_amount']">0</span>
+                    </td>
+                </tr>
+            </xpath>
+
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <xpath expr="/t/tr[2]" position="replace">
+                <tr class="text-center border-black o_total">
+                    <td style="border-right: 1px solid black;"><strong>Total</strong></td>
+                    <td>
+                        <span t-out="tax_totals['formatted_amount_total']">31.05</span>
+                    </td>
+                </tr>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

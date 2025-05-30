@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_book_store_book_store,book_store.book_store,model_book_store_book_store,base.group_user,1,1,1,1
+access_book_store_movie_list,movie_list,model_movie_list,base.group_user,1,1,1,1
+access_book_store_genre_list,genre_list,model_genre_list,base.group_user,1,1,1,1
+access_book_store_category_list,category_list,model_category_list,base.group_user,1,1,1,1
+access_book_store_mb_sellers,mb_sellers,model_mb_sellers,base.group_user,1,1,1,1
+access_book_store_mb_companies,mb_companies,model_mb_companies,base.group_user,1,1,1,1

@@ -1,0 +1,90 @@
+<odoo>
+  <data>
+
+    <!-- mb_sellers_list_view -->
+    <record model="ir.ui.view" id="mb_sellers_list_view">
+      <field name="name">mb_sellers_list_view</field>
+      <field name="model">mb_sellers</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="seller_company"/>
+            <field name="seller_mobile"/>
+            <field name="seller_email"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- mb_sellers_ref_list -->
+    <record model="ir.ui.view" id="mb_sellers_ref_list_view">
+      <field name="name">mb_sellers_ref_list_view</field>
+      <field name="model">mb_sellers</field>
+      <field name="priority">100</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="seller_mobile"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- mb_sellers_form_view -->
+    <record model="ir.ui.view" id="mb_sellers_form_view">
+      <field name="name">mb_sellers_form_view</field>
+      <field name="model">mb_sellers</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="seller_birth"/>
+                        <field name="seller_image" widget="image" class="oe_avatar"/>
+                    </group>
+                    <group>
+                        <field name="seller_mobile" widget="phone"/>
+                        <field name="seller_email" widget="email"/>
+                        <field name="seller_company" string="Company" 
+                            context="{'show_address':1}" options="{'no_create': True, 'no_create_edit': True, 'always_reload':True}"/>
+                    </group>
+                </group>   
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- mb_sellers_ref_form -->
+    <record model="ir.ui.view" id="mb_sellers_ref_form_view">
+      <field name="name">mb_sellers_ref_form_view</field>
+      <field name="model">mb_sellers</field>
+      <field name="priority">100</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="seller_image" widget="image" class="oe_avatar"/>
+                    </group>
+                    <group>
+                        <field name="seller_mobile" widget="phone"/>
+                        <field name="seller_email" widget="email"/>
+                    </group>
+                </group>   
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+      
+    <!-- mb_sellers_action_window -->
+    <record model="ir.actions.act_window" id="mb_sellers_action_window">
+      <field name="name">Seller List</field>
+      <field name="res_model">mb_sellers</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+   <!-- Top menu item -->
+      
+  </data>
+</odoo>

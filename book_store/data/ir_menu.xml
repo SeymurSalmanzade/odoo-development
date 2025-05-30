@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        
+       <!-- Top menu item -->
+        <menuitem name="M&amp;B Store" id="book_store.menu_root"/>
+            
+        <!-- menu categories -->
+        <menuitem name="Menu" id="book_store.menu" parent="book_store.menu_root" sequence="1"/>
+        <menuitem name="Books" id="book_store.book_list" parent="book_store.menu_root" action="book_store.action_window" sequence="2"/>
+        <menuitem name="Movies" id="book_store.movie_list" parent="book_store.menu_root" action="movie_list_action_window" sequence="3"/>
+        <menuitem name="Currencies" id="book_store.currency" parent="book_store.menu_root" action="res_currency_action_window" sequence="100"/>
+        
+        <!-- actions -->
+        <menuitem name="Companies" id="book_store.mb_companies" parent="book_store.menu" action="mb_companies_action_window"
+                sequence="1"/>
+        <menuitem name="Sellers" id="book_store.mb_sellers" parent="book_store.menu" action="mb_sellers_action_window"
+              sequence="2"/>
+        <menuitem name="Categories" id="book_store.category_list" parent="book_store.menu" action="category_list_action_window" sequence="3" groups="base.group_no_one"/>
+        <menuitem name="Genres" id="book_store.genre_list" parent="book_store.menu" action="genre_list_action_window" sequence="4" groups="base.group_no_one"/>
+    </data>
+</odoo>

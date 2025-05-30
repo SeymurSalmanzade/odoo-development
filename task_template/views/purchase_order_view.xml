@@ -1,0 +1,16 @@
+<odoo>
+    
+  <data>
+    <record model="ir.ui.view" id="purchase_order_inherited_form">
+      <field name="name">PurchaseOrder:InheritedForm</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.purchase_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='purchase_delivery_invoice']/group[1]/group[2]/field[@name='fiscal_position_id']" position="after">
+          <field name="ship_by"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="book_store_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="book_store.books_report_template"/>
+            </t>
+        </t>
+    </template>
+    
+    <template id="books_report_template">
+         <t t-call="web.external_layout">
+             <div class="page">
+                 <h1>This is test report</h1>
+                 <!-- <p t-att-style="'background-color:purple;'">
+                     <a href="https://www.beyazperde.com/filmler/film-29276/"><span t-esc="doc.name"/></a>
+                 </p> -->
+                 <p t-attf-style="background-color:{{doc.seller_company.company_color if doc.seller_company.company_color else 'lightgray'}};">
+                 <a t-attf-href="https://www.beyazperde.com/filmler/film-29276/"><span t-esc="doc.name"/></a>
+                 </p>
+                 <p>
+                     <a t-att-href="doc.email"><span t-esc="doc.email"/></a>
+                 </p>
+                  <!-- <t t-call="book_store.dataoutput_related_template"/>
+                  <t t-call="book_store.conditional_related_template"/>
+                  <t t-call="book_store.looping_related_template"/>
+                  <t t-call="book_store.variable_related_template"/> -->
+                 <!-- 'style':'background-color:blue;',  -->
+             </div>
+         </t>
+    </template>
+
+    <template id="dataoutput_related_template">
+                        <!-- t-field, t-esc topic -->
+                        <!-- t-out is only works in v15 -->
+        
+                        <!-- <h1>This is test report</h1>
+                        <t t-set="a" t-value="doc.name"/>
+                        <h2 t-field="doc.name"/>
+                        <h3 t-esc="a"/> -->
+    </template>
+    
+    <template id="conditional_related_template">
+                        <!-- conditional statement topic -->
+        
+                        <!-- <t t-if="doc.name == 'Harry Potter'">
+                            <p>Yes, this is <span t-field="doc.name"/> book</p>
+                        </t>
+                        <t t-elif="doc.name == 'The Lord of The Rings'">
+                            <p>This is my fav book <span t-field="doc.name"/></p>
+                        </t>
+                        <t t-else="">
+                            No, this is not Harry Potter or other books<br/>
+                            This is <span t-esc="doc.name"/>
+                        </t> -->
+                        
+                        <!-- or -->
+                        
+                        <!-- <p t-if="doc.name == 'Harry Potter'">Yes this is <span t-field="doc.name"/> book</p>
+                        <p t-elif="doc.name == 'The Lord of The Rings'">This is my fav book <span t-esc="doc.name"/></p>
+                        <p t-else="">
+                            No, this is not Harry Potter<br/>
+                            This is <span t-field="doc.name"/>
+                        </p> -->
+    </template>
+        
+    <template id="looping_related_template">
+                        <!-- Looping statement topic -->
+        
+                        <!-- <t t-set="a" t-value="0"/>
+                        <t t-foreach="doc.currency_id.book_lists_id" t-as="rct">
+                            <t t-set="a" t-value="a + 1"/>
+                            <h1>
+                                <p t-esc="a"/>
+                                <p t-esc="rct.name"/>
+                            </h1>
+                            Queue: <span t-esc="rct_index"/>
+                            <p>Is this first? <span t-esc="rct_first"/></p>
+                            <p t-esc="rct"/>
+                            <p t-esc="rct_value"/>
+                        </t> -->
+    </template>
+
+    <template id="variable_related_template">
+                        <!-- variables -->
+        
+                        <!-- <t t-set="a" t-value="doc.name"/>
+                        <p t-esc="a"/>
+                        <t t-set="b" t-value="'Book Store'"/>
+                        <p t-esc="b"/> 
+                        <t t-set="a" t-value="0"/>
+                        <t t-foreach="doc.currency_id.book_lists_id" t-as="rct">
+                            <t t-set="a" t-value="a + 1"/>
+                        </t>
+                        <p t-esc="a"/> -->
+    </template>
+
+    <!-- <record id="book_report_template_paperformat" model="report.paperformat">
+        <field name="name">Book Rep Temp Paperformat</field>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record> -->
+
+        
+    <record id="book_store_report_temp" model="ir.actions.report">
+        <field name="name">Book Report</field>
+        <field name="model">book_store.book_store</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">book_store.book_store_report_template</field>
+        <field name="report_file">book_store.book_store_report_template</field>
+        <field name="print_report_name">'Book Report'</field>
+        <field name="binding_model_id" ref="model_book_store_book_store"/>
+        <field name="binding_type">report</field>
+        <!-- <field name="paperformat_id" ref="book_store.book_report_template_paperformat"/> -->
+    </record>
+</odoo>

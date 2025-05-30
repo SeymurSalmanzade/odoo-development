@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+
+    <!-- res_currency_inherit_form_view -->
+    <record model="ir.ui.view" id="res_currency_inherit_form_view">
+      <field name="name">res_currency_inherit_form_view</field>
+      <field name="model">res.currency</field>
+      <field name="inherit_id" ref="base.view_currency_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='decimal_places']" position="after">
+          <field name="book_lists_id" invisible="name != 'AZN'"/>
+        </xpath>
+        <!-- <xpath expr="//field[@name='book_lists_id']" position="after">
+          <field name="movie_lists_id"/>
+        </xpath> -->
+      </field>
+    </record>
+      
+    <!-- res_currency_action_window -->
+    <record model="ir.actions.act_window" id="res_currency_action_window">
+      <field name="name">res_currency_inherit_form_view_window</field>
+      <field name="res_model">res.currency</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+      
+   <!-- Top menu item -->
+      
+  </data>
+</odoo>

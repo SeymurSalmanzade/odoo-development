@@ -1,0 +1,20 @@
+<odoo>
+    
+  <data>
+    <record model="ir.ui.view" id="res_company_inherited_form">
+      <field name="name">ResCompany:InheritedForm</field>
+      <field name="model">res.company</field>
+      <field name="inherit_id" ref="base.view_company_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='general_info']/group[1]/group[1]/field[@name='currency_id']" position="after">
+            <field name="director"/>
+            <field name="director_sign" widget="signature" options="{'size': [200,80]}"/>
+        </xpath>
+        <xpath expr="//field[@name='color']" position="after">
+            <field name="stamp" widget="image" options="{'size': [0,100]}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+
+</odoo>
