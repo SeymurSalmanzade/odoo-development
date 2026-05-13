@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <record id="hr_leave_request_report" model="ir.actions.report">
+            <field name="name">Leave Request</field>
+            <field name="model">hr.leave</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ikma_addons.hr_leave_request_template</field>
+            <field name="report_file">ikma_addons.hr_leave_templates</field>
+            <field name="print_report_name">'Leave Request - %s' % (object.display_name)</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="ikma_addons.hr_leave_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('ikma_addons.group_ikma_azerbaijan_user'))]"/>
+        </record>
+
+        <record id="hr_leave_request_self_employed_report" model="ir.actions.report">
+            <field name="name">Leave Request Self Employed</field>
+            <field name="model">hr.leave</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ikma_addons.hr_leave_request_self_employed_template</field>
+            <field name="report_file">ikma_addons.hr_leave_templates</field>
+            <field name="print_report_name">'Leave Request Self Employed - %s' % (object.display_name)</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="ikma_addons.hr_leave_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('ikma_addons.group_ikma_azerbaijan_user'))]"/>
+        </record>
+
+        <record id="hr_leave_approval_report" model="ir.actions.report">
+            <field name="name">Leave Approval</field>
+            <field name="model">hr.leave</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ikma_addons.hr_leave_approval_template</field>
+            <field name="report_file">ikma_addons.hr_leave_templates</field>
+            <field name="print_report_name">'Leave Approval - %s' % (object.display_name)</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="ikma_addons.hr_leave_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('ikma_addons.group_ikma_azerbaijan_user'))]"/>
+        </record>
+
+        <record id="hr_leave_approval_self_employed_report" model="ir.actions.report">
+            <field name="name">Leave Approval Self Employed</field>
+            <field name="model">hr.leave</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ikma_addons.hr_leave_approval_self_employed_template</field>
+            <field name="report_file">ikma_addons.hr_leave_templates</field>
+            <field name="print_report_name">'Leave Approval Self Employed - %s' % (object.display_name)</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="ikma_addons.hr_leave_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('ikma_addons.group_ikma_azerbaijan_user'))]"/>
+        </record>
+
+        <record id="hr_leave_business_trip_report" model="ir.actions.report">
+            <field name="name">Business Trip</field>
+            <field name="model">hr.leave</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">ikma_addons.hr_leave_business_trip_template</field>
+            <field name="report_file">ikma_addons.hr_leave_templates</field>
+            <field name="print_report_name">'Business Trip - %s' % (object.display_name)</field>
+            <field name="binding_model_id" ref="hr_holidays.model_hr_leave"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="ikma_addons.hr_leave_paperformat"/>
+            <field name="groups_id" eval="[(4, ref('ikma_addons.group_ikma_azerbaijan_user'))]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <record id="sale_annex_view_search" model="ir.ui.view">
+            <field name="name">sale.annex.view.search</field>
+            <field name="model">sale.annex</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="assignment"/>
+                    <field name="order_id"/>
+                    <field name="tta_handover_id"/>
+                    <group>
+                        <filter name="assignment" string="Assignment" context="{'group_by': 'assignment'}"/>
+                        <filter name="tta_handover_id" string="TTA Handover" context="{'group_by': 'tta_handover_id'}"/>
+                        <filter name="tta_transferee_id" string="TTA Transferee" context="{'group_by': 'tta_transferee_id'}"/>
+                        <filter name="order_state" string="Order State" context="{'group_by': 'order_state'}"/>
+                        <filter name="order_subscription_state" string="Order Subscription State" context="{'group_by': 'order_subscription_state'}"/>
+                        <filter name="company_id" string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id ="sale_annex_view_list" model="ir.ui.view">
+            <field name="name">sale.annex.view.list</field>
+            <field name="model">sale.annex</field>
+            <field name="arch" type="xml">
+                <list create="False">
+                    <field name="name"/>
+                    <field name="assignment"/>
+                    <field name="date"/>
+                    <field name="order_id"/>
+                    <field name="tta_handover_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+        <record id ="sale_annex_view_form" model="ir.ui.view">
+            <field name="name">sale.annex.view.form</field>
+            <field name="model">sale.annex</field>
+            <field name="arch" type="xml">
+                <form create="False">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="assignment"/>
+                                <field name="date"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="order_id" readonly="1"/>
+                                <field name="order_state" decoration-success="order_state == 'sale'" decoration-info="order_state == 'draft'" decoration-primary="order_state == 'sent'" widget="badge"/>
+                                <field name="order_subscription_state" widget="badge" decoration-info="order_subscription_state in ['2_renewal', '1_draft']" decoration-primary="order_subscription_state in ['7_upsell']" decoration-secondary="order_subscription_state in ['5_renewed']" decoration-success="order_subscription_state in ['3_progress']" decoration-warning="order_subscription_state in ['4_paused']" decoration-danger="order_subscription_state in ['6_churn']"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Header Note">
+                                <field name="note_header" nolabel="1" colspan="2" placeholder="Insert your Annex Header note here..."/>
+                            </group>
+                            <group string="Footer Note">
+                                <field name="note_footer" nolabel="1" colspan="2" placeholder="Insert your Annex Footer note here..."/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="TTA" name="tta_info">
+                                <group>
+                                    <field name="tta_handover_id" widget="many2one_avatar_user" domain="[('is_company', '=', False)]"/>
+                                    <field name="tta_handover_function"/>
+                                </group>
+                                <group>
+                                    <field name="tta_transferee_id" widget="many2one_avatar_user" domain="[('is_company', '=', False)]"/>
+                                    <field name="tta_transferee_function"/>
+                                </group>
+                            </group>
+                            <group string="Packages">
+                                <div class="text-warning text-nowrap" invisible="order_state == 'sale'">
+                                    Packages will be create automatically after confirming of selected Order
+                                </div>
+                                <field name="tta_package_month_ids" nolabel="1" colspan="2" invisible="not tta_package_month_ids or order_state != 'sale'">
+                                    <list editable="bottom" create="False" delete="False">
+                                        <field name="month" readonly="1"/>
+                                        <field name="package_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                                        <field name="annex_id" column_invisible="1"/>
+                                        <field name="company_id" groups="base.group_multi_company" readonly="1" optional="hide"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <template id="addendum_layout" inherit_id="web.external_layout_boxed" primary="True">
+            <xpath expr="/t/div[1]" position="before">
+                <t t-if="not o" t-set="o" t-value="doc"/>
+
+                <t t-if="not company">
+                    <!-- Multicompany -->
+                    <t t-if="company_id">
+                        <t t-set="company" t-value="company_id"/>
+                    </t>
+                    <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-else="else">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                </t>
+            </xpath>
+            <xpath expr="/t/div[1]/div[1]" position="replace">
+                <div class="row mb-2">
+                    <div class="col-2">
+                        <img t-if="company.logo"
+                            style="max-height: 100px; max-width: 160px;"
+                            t-att-src="image_data_uri(company.logo)"
+                            alt="Logo"/>
+                    </div>
+                    <div class="p-0 col-10 text-center">
+                        <p t-if="doc.contract_type not in ['none', False]" style="font-size: large;" class="fw-bold">
+                            <t t-if="doc.partner_id.lang == 'en_US'">
+                                Addendum № 1 to the <span t-if="doc.contract_type == 'service'">Technical Service</span>
+                                <span t-elif="doc.contract_type == 'installation'">Installation</span>
+                                <span t-elif="doc.contract_type == 'spare_parts'">Sales</span>
+                                contract № <span t-field="doc.contract_number"/>, dated <span t-out="doc._get_format_date(doc.contract_date)"/>, signed between <span t-field="company.company_name_short"/> and <span t-field="doc.contract_partner_company_short"/>.
+                                <span t-if="doc.contract_type == 'installation'"> Obligations of the parties</span>
+                            </t>
+                            <t t-elif="doc.partner_id.lang == 'az_AZ'">
+                                <span t-field="company.company_name_short"/> ilə <span t-field="doc.contract_partner_company_short"/> arasında imzalanmış <span t-field="doc.contract_number"/> saylı, <span t-out="doc._get_format_date(doc.contract_date)"/> tarixli
+                                <span t-if="doc.contract_type == 'service'">Texniki xidmət</span>
+                                <span t-elif="doc.contract_type == 'installation'">Quraşdırma</span>
+                                <span t-elif="doc.contract_type == 'spare_parts'">Alqı-satqı</span>
+                                <span>müqaviləsinə ƏLAVƏ 1</span>
+                                <span t-if="doc.contract_type == 'installation'">. Tərəflərin öhdəlikləri</span>
+                            </t>
+                        </p>
+                    </div>
+                </div>
+                <div name="date-location">
+                    <p class="fw-bold">
+                        <span>Baku city</span>
+                        <span class="text-nowrap" style="float: right;" t-out="doc._get_format_date(doc.contract_date)"/>
+                    </p>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[3]" position="replace">
+                <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}} border-0">
+                    <!--  -->
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

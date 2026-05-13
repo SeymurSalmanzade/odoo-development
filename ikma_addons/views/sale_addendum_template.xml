@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record id="sale_addendum_template_view_list" model="ir.ui.view">
+            <field name="name">sale.addendum.template.view.list</field>
+            <field name="model">sale.addendum.template</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="contract_type"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>            
+        </record>
+
+        <record id="sale_addendum_template_view_form" model="ir.ui.view">
+            <field name="name">sale.addendum.template.view.form</field>
+            <field name="model">sale.addendum.template</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" placeholder="e.g. Base Addendum Template"/></h1>
+                        </div>
+                        <group>
+                            <field name="type"/>
+                            <field name="contract_type"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                        <separator/>
+                        <notebook>
+                            <page string="Template">
+                                <field name="arch" widget="code" options="{'mode': 'xml'}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>            
+        </record>
+    </data>
+</odoo>

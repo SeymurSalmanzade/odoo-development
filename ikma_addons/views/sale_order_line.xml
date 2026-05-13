@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_order_line_tree_inherit_ikma_addons" model="ir.ui.view">
+            <field name="name">view.order.line.tree.inherit.ikma_addons</field>
+            <field name="model">sale.order.line</field>
+            <field name="inherit_id" ref="sale.view_order_line_tree"/>
+            <field name="arch" type="xml">
+                <field name="price_subtotal" position="after">
+                    <field name="average_price_subtotal" avg="Average" invisible="1" widget="monetary" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

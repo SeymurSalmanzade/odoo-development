@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <template id="tta_layout_boxed" inherit_id="web.external_layout_boxed" primary="True">
+            <xpath expr="/t/div[1]" position="before">
+                <t t-if="not o" t-set="o" t-value="doc"/>
+
+                <t t-if="not company">
+                    <!-- Multicompany -->
+                    <t t-if="company_id">
+                        <t t-set="company" t-value="company_id"/>
+                    </t>
+                    <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-else="else">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                </t>
+            </xpath>
+            <xpath expr="//div[3]" position="replace">
+                <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}} border-0">
+                  <!--  -->
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

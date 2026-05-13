@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+        <template id="report_saleorder_document_inherit_ikma_addons" inherit_id="sale.report_saleorder_document">
+            <!-- Default changes transfered from saleorder_report_template_erpgo -->
+            <xpath expr="//div[hasclass('page')]" position="before">
+                <head>
+                    <meta charset="UTF-8"/>
+                    <style>
+                        .o_report_layout_boxed table thead tr th {
+                            text-align: center !important;
+                        }
+                        .o_report_layout_boxed table tbody tr td {
+                            text-align: center !important;
+                        }
+                        #informations .col {
+                            flex: 0 0 auto;
+                            width: 25%;
+                        }
+                        .report-wrapping-flexbox {
+                            display: block !important;
+                        }
+                        .report-wrapping-flexbox > .col {
+                            float: left;
+                        }
+                    </style>
+                </head>
+            </xpath>
+            <xpath expr="//t[@t-set='address']/div" position="attributes">
+                <attribute name="t-options">{'widget': 'contact', 'fields': ['name'], 'no_marker': True}</attribute>
+            </xpath>
+            <xpath expr="//t[@t-set='information_block']/div" position="attributes">
+                <attribute name="t-options">{'widget': 'contact', 'fields': ['name', 'phone'], 'no_marker': True}</attribute>
+            </xpath>
+            <xpath expr="//t[@t-set='information_block']/t[@t-if='doc.partner_shipping_id != doc.partner_invoice_id']/div" position="attributes">
+                <attribute name="t-options">{'widget': 'contact', 'fields': ['name', 'phone'], 'no_marker': True}</attribute>
+            </xpath>
+            <xpath expr="//th[@name='th_description']" position="before">
+                <th name="th_numbering">№</th>
+            </xpath>
+            <xpath expr="//t[@t-foreach='lines_to_report']" position="before">
+                <t t-set="item_number" t-value="0"/>
+            </xpath>
+            <xpath expr="//td[@name='td_name']" position="before">
+                <t t-set="item_number" t-value="item_number + 1"/>
+                <td name="td_item_number">
+                    <span t-out="item_number"/>
+                </td>
+            </xpath>
+            <xpath expr="//div[@id='informations']" position="attributes">
+                <attribute name="class" remove="mb-4" add="report-wrapping-flexbox clearfix" separator=" "/>
+            </xpath>
+            <xpath expr="//div[@id='informations']" position="inside">
+                <div t-if="doc.payment_term_id" class="col" name="payment_terms">
+                    <strong>Payment terms:</strong><br/>
+                    <span t-field="doc.payment_term_id"></span>
+                </div>
+            </xpath>
+            <xpath expr="//p[@t-if='not is_html_empty(doc.payment_term_id.note)']" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <!--  -->
+
+            <!-- IKMA changes -->
+            <xpath expr="//th[@name='th_taxes']" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_taxes']" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_name']/span" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_name']/span" position="after">
+                <span groups="ikma_addons.group_ikma_azerbaijan_user" t-out="line.product_id.description_sale or line.name"/>
+            </xpath>
+            <xpath expr="//td[@name='td_quantity']/span[@t-field='line.product_uom_qty']" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_quantity']/span[@t-field='line.product_uom_qty']" position="after">
+                <span groups="ikma_addons.group_ikma_azerbaijan_user" t-field="line.product_uom_qty" class="text-nowrap" t-options="{'widget': 'float', 'precision': 2}">3</span>
+            </xpath>
+            <xpath expr="//td[@name='td_priceunit']/span[1]" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_priceunit']/span[2]" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@name='td_priceunit']/span[2]" position="after">
+                <span groups="ikma_addons.group_ikma_azerbaijan_user" t-if="line.discount &lt; 0" t-out="(1 - line.discount / 100.0) * line.price_unit" t-options="{'widget': 'float', 'precision': 2}"/>
+                <span groups="ikma_addons.group_ikma_azerbaijan_user" t-else="" t-field="line.price_unit" t-options="{'widget': 'float', 'precision': 2}"/>
+            </xpath>
+            <xpath expr="//td[@t-if='display_discount']/span" position="attributes">
+                <attribute name="groups">!ikma_addons.group_ikma_azerbaijan_user</attribute>
+            </xpath>
+            <xpath expr="//td[@t-if='display_discount']/span" position="after">
+                <span groups="ikma_addons.group_ikma_azerbaijan_user" t-field="line.discount" t-options="{'widget': 'integer'}">-</span>
+            </xpath>
+            <!--  -->
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="address_layout_inherited" inherit_id="web.address_layout">
+            <xpath expr="//t[@t-if='information_block']" position="before">
+                <t t-if="company_personal_information_block">
+                    <t t-set="colclass" t-value="'col-5 offset-1'"/>
+                    <div name="company_personal_information_block" t-att-class="'col-4' if information_block else 'col-6'">
+                        <t t-out="company_personal_information_block or None">
+                            <div class="bg-light border-1 rounded h-100 d-flex flex-column align-items-center justify-content-center p-4 opacity-75 text-muted text-center">
+                                <strong>Company personal information block</strong>
+                                <div>Usually contains a account number or vat number.</div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </xpath>
+            <xpath expr="//div[@name='information_block']" position="attributes">
+                <attribute name="class"></attribute>
+                <attribute name="t-att-class">'col-4' if company_personal_information_block else 'col-6'</attribute>
+            </xpath>
+            <xpath expr="//div[@name='address']" position="attributes">
+                <attribute name="t-att-class">'col-4' if company_personal_information_block and information_block else colclass</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

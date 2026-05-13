@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="annex_report_wizard_form" model="ir.ui.view">
+            <field name="name">annex.report.wizard.form</field>
+            <field name="model">annex.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="order_id" invisible="1"/>
+                            <field name="available_annex_ids" invisible="1"/>
+                            <field name="annex_ids" required="1" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Print" type="object" name="print_annex_report" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

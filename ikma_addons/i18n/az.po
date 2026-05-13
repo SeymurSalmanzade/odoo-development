@@ -1,0 +1,2838 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ikma_addons
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e-20260119\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-02 12:00+0000\n"
+"PO-Revision-Date: 2026-02-02 16:00+0400\n"
+"Last-Translator: ERPGO LLC\n"
+"Language-Team: ERPGO LLC\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "\"Öz hesabına məzuniyyət haqqında\""
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "\"Əmək məzuniyyəti haqqında\""
+msgstr ""
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid "%s Contract #%s has been generated and attached. You can download it from here."
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.hr_leave_business_trip_report
+msgid "'Business Trip - %s' % (object.display_name)"
+msgstr "'Ezamiyyə - %s' % (object.display_name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.action_report_invoice_with_stamp
+msgid "'Invoice with Stamp - %s' % (object.name)"
+msgstr "'Möhürlü Hesab Faktura - %s' % (object.name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.hr_leave_approval_report
+msgid "'Leave Approval - %s' % (object.display_name)"
+msgstr "'Məzuniyyət Təsdiqi - %s' % (object.display_name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.hr_leave_approval_self_employed_report
+msgid "'Leave Approval Self Employed - %s' % (object.display_name)"
+msgstr "'Öz Hesabına Məzuniyyət Təsdiqi - %s' % (object.display_name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.hr_leave_request_report
+msgid "'Leave Request - %s' % (object.display_name)"
+msgstr "'Məzuniyyət Sorğusu - %s' % (object.display_name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.hr_leave_request_self_employed_report
+msgid "'Leave Request Self Employed - %s' % (object.display_name)"
+msgstr "'Öz Hesabına Məzuniyyət Sorğusu - %s' % (object.display_name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.service_invoice_report
+msgid "'Service Invoice - %s' % (object.name)"
+msgstr "'Xidmət Hesab Fakturası - %s' % (object.name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.service_invoice_with_stamp_report
+msgid "'Service Invoice with Stamp - %s' % (object.name)"
+msgstr "' Möhürlü Xidmət Hesab Fakturası - %s' % (object.name)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid ""
+") gün müddətinə öz hesabıma (ödənişsiz) məzuniyyət verilməsinə sərəncam verəsiniz."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid ") gün növbəti məzuniyyət verilməsinə sərəncam verəsiniz."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid ") təqvim günü"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid ""
+", \n"
+"                            and"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid ""
+", \n"
+"                            hereinafter referred to as the “Customer”, represented by"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ", and on the other hand, the authorized representative of"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid ", dated"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ", hereby confirm,"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid ", hereinafter referred to as the “Contractor”, represented by"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid ", signed between"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "-ci il tarixində işə başlamalıdır."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "-ci il tarixlərində"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "-i Azərbaycan Respublikasının Əmək Məcəlləsinin 128-ci maddəsinə əsasən"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "-na"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "-nin"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "-nin direktoru"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "-nin səlahiyyətli nümayəndəsi və digər tərəfdən"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "-nin səlahiyyətli nümayəndəsi, qeyd olunmuş tərəflər arasında imzalanmış"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+msgid ". Tərəflərin öhdəlikləri"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "00/0000"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__ft20
+msgid "20 ft"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__ft40
+msgid "40 ft"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "<b>1.</b>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "<b>Name, Surname:</b>"
+msgstr "<b>Ad, Soyad:</b>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "<b>İmza:</b>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "<b>ƏRİZƏ</b>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ""
+"<br/>\n"
+"                                <b>Position:</b>"
+msgstr ""
+"<br/>\n"
+"                                <b>Vəzifə:</b>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ""
+"<br/>\n"
+"                            <small>(the date is written manually by the Client)</small>"
+msgstr ""
+"<br/>\n"
+"                            <small>(tarix Sifarişçi tərəfindən əl ilə yazılır)</small>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_view_form_inherit_ikma_addons
+msgid "<i class=\"fa fa-long-arrow-right\" aria-label=\"Arrow icon\" title=\"Arrow\"/>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "<small class=\"float-end\" style=\"margin-right: 25%\">(Ad, Soyad)</small>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\"/>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "<span class=\"fw-bolder\">Əsas:</span> İşçinin məzuniyyət ərizəsi"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid ""
+"<span class=\"text-muted\">Footer Note will be printed at the bottom of the Annex.</"
+"span>"
+msgstr "<span class=\"text-muted\">Sonluq qeydi əlavənin aşağısında çap olunacaq.</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid ""
+"<span class=\"text-muted\">Header Note will be printed on top of the Annex.</span>"
+msgstr ""
+"<span class=\"text-muted\">Başlıq qeydi əlavənin yuxarısında çap olunacaq.</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid ""
+"<span class=\"text-muted\">Note will be printed on bottom of the Commercial Offer.</"
+"span>"
+msgstr ""
+"<span class=\"text-muted\">Qeyd Kommersiya Təklifinin aşağı hissəsində çap olunacaq.</"
+"span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid ""
+"<span class=\"text-start text-muted\">Sign</span>\n"
+"                            <span class=\"float-end text-muted\">Stamp</span>"
+msgstr ""
+"<span class=\"text-start text-muted\">İmza</span>\n"
+"                            <span class=\"float-end text-muted\">m/y</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<span style=\"font-size: large;\">OFFER APPROVAL</span>"
+msgstr "<span style=\"font-size: large;\">SİFARİŞİN TƏSDİQİ</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "<span>/</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<span>Amount</span>"
+msgstr "<span>Məbləğ</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+msgid "<span>Baku city</span>"
+msgstr "<span>Bakı şəhəri</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "<span>Bakı şəhəri</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Bank Code:</span>"
+msgstr "<span>Bank Kodu:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Bank Tax ID:</span>"
+msgstr "<span>Bank VÖEN-i:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Beneficiary Acc:</span>"
+msgstr "<span>H/h:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Correspondent Acc:</span>"
+msgstr "<span>M/h:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Correspondent Bank SWIFT:</span>"
+msgstr "<span>Müxbir/Bank SWIFT:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Correspondent Bank:</span>"
+msgstr "<span>Müxbir/Bank:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<span>Delivery Time</span>"
+msgstr "<span>Çatdırılma vaxtı</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<span>Description</span>"
+msgstr "<span>Təsvir</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<span>Disc. U/Price</span>"
+msgstr "<span>End. V/Qiymət</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<span>Invoice</span>"
+msgstr "<span>Hesab Faktura</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Nº</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<span>Period</span>"
+msgstr "<span>Dövr</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<span>Quantity (Month)</span>"
+msgstr "<span>Say (Ay)</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "<span>Sign________________(Stamp)</span>"
+msgstr "<span>İmza________________(M.Y)</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Swift:</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<span>Tax ID:</span>"
+msgstr "<span>VÖEN:</span>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "<span>Təqdimatı verən şəxsin adı</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid ""
+"<span>Təqdimatı verən şəxsin vəzifəsi</span>\n"
+"                                        <span class=\"float-end\">Direktor</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+msgid "<span>müqaviləsinə ƏLAVƏ 1</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "<span>müqaviləsinə ƏLAVƏ</span>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid ""
+"<strong>\n"
+"                            <span>Bank Requisites:</span>\n"
+"                        </strong>\n"
+"                        <br/>\n"
+"                        <span>Bank:</span>"
+msgstr ""
+"<strong>\n"
+"                            <span>Bank Rekvizitləri:</span>\n"
+"                        </strong>\n"
+"                        <br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Tarix:</strong>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<strong>Date:</strong><br/>"
+msgstr "<strong>Tarix:</strong><br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "<strong>Director:</strong>"
+msgstr "<strong>Direktor:</strong>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.crm_case_kanban_view_leads_inherit_ikma_addons
+msgid "<strong>Equipment Quantity:</strong>"
+msgstr "<strong>Avadanlıq sayı:</strong>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.crm_case_kanban_view_leads_inherit_ikma_addons
+msgid "<strong>Equipment Type:</strong>"
+msgstr "<strong>Avadanlıq növü:</strong>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.report_saleorder_document_inherit_ikma_addons
+msgid "<strong>Payment terms:</strong><br/>"
+msgstr "<strong>Ödəniş şərtləri:</strong><br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<strong>Project Name:</strong><br/>"
+msgstr "<strong>Layihə adı:</strong><br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "<strong>Project Number:</strong><br/>"
+msgstr "<strong>Layihə nömrəsi:</strong><br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "<strong>Total Number of Equipment:</strong><br/>"
+msgstr "<strong>Avadanlıqların sayı:</strong><br/>"
+
+#. module: ikma_addons
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__last_updated_tta_lang__az_az
+#: model:ir.model.fields.selection,name:ikma_addons.selection__tta_report_wizard__lang__az_az
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_packages_view_form
+msgid "AZ"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.purchase_order_view_form_inherit
+msgid "Actual Container qty"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__addendum_template_id
+msgid "Addendum Template"
+msgstr "Addendum şablonu"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.sale_addendum_template_action_window
+#: model:ir.ui.menu,name:ikma_addons.menu_sale_addendum_template
+msgid "Addendum Templates"
+msgstr "Addendum Şablonları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__type
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__installation_addendum
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__service_addendum
+msgid "Addendum Type"
+msgstr "Addendum növü"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Addendum to the"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+msgid "Addendum №"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+msgid "Addendum № 1 to the"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Additional Note for Commercial Offer..."
+msgstr "Kommersiya Təklifi üçün əlavə qeyd..."
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_res_company__spo_note
+#: model:ir.model.fields,help:ikma_addons.field_res_config_settings__spo_note
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__spo_note
+msgid "Additional note for SPO (Commercial Offer)"
+msgstr "SPO (Kommersiya Təklifi) üçün əlavə qeyd"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__with_confirming
+msgid ""
+"Adds the full name and position of the executor's confirming user to the report. This "
+"user is selected in the 'Contract Details' section of the Sales Order."
+msgstr ""
+"Hesabata icraçının təsdiqləyən istifadəçisinin tam adını və vəzifəsini əlavə edir. Bu "
+"istifadəçi Satış Sifarişinin 'Müqavilə Təfərrüatları' bölməsində seçilir."
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__with_partner_confirming
+msgid ""
+"Adds the full name and position of the partner’s confirming user to the report. This "
+"user is defined in the 'Contract Details' section of the Sales Order."
+msgstr ""
+"Hesabata müştərinin təsdiqləyən istifadəçisinin tam adını və vəzifəsini əlavə edir. Bu "
+"istifadəçi Satış Sifarişinin 'Müqavilə Məlumatları' bölməsində müəyyən edilir."
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__with_handover
+msgid ""
+"Adds the handover person's full name and position to the report. The handover is "
+"defined in each annex."
+msgstr ""
+"Hesabata təhvil verən şəxsin tam adını və vəzifəsini əlavə edir. Təhvil hər bir "
+"əlavədə müəyyən edilir."
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__with_transferee
+msgid ""
+"Adds the transferee's full name and position to the report. The transferee is defined "
+"in each annex."
+msgstr ""
+"Hesabata təhvil alan şəxsin tam adını və vəzifəsini əlavə edir. Təhvil alan şəxs hər "
+"bir əlavədə müəyyən edilir."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Alqı-satqı"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__amount_per_line
+msgid "Amount Per Line"
+msgstr "Sətir başı məbləğ"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.annex_template_report
+#: model:ir.actions.server,name:ikma_addons.button_annex_report
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__annex_id
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "Annex"
+msgstr "Əlavə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__date
+msgid "Annex Date"
+msgstr "Əlavənin tarixi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__annex_note_footer
+#: model:ir.model.fields,field_description:ikma_addons.field_res_config_settings__annex_note_footer
+msgid "Annex Note Footer"
+msgstr "Əlavənin sonluq qeydi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__annex_note_header
+#: model:ir.model.fields,field_description:ikma_addons.field_res_config_settings__annex_note_header
+msgid "Annex Note Header"
+msgstr "Əlavənin başlıq qeydi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__annex_id
+msgid "Annex Reference"
+msgstr "Əlavə istinadı"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_annex_report_wizard
+msgid "Annex Report Wizard"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__annex_tax_totals
+msgid "Annex Tax Totals"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.sale_annex_action_window
+#: model:ir.ui.menu,name:ikma_addons.menu_sale_annex
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_form
+msgid "Annexes"
+msgstr "Əlavələr"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__annex_ids
+msgid "Annexes to Print"
+msgstr "Çap olunacaq Əlavələr"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Approve"
+msgstr "Təsdiqlə"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Approved"
+msgstr "Təsdiqləndi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__is_approved_quotation
+msgid "Approved Quotation"
+msgstr "Təsdiqlənmiş təklif"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Are you sure you want to Approve the Quotation?"
+msgstr "Təklifi təsdiqləmək istədiyinizə əminsiniz?"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Are you sure you want to cancel the Contract?"
+msgstr "Müqaviləni ləğv etmək istədiyinizə əminsiniz?"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.crm_lead_view_form_inherit_ikma_addons
+msgid "Are you sure you want to regenerate prefix?"
+msgstr "Prefiksi yenidən yaratmaq istədiyinizə əminsiniz?"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__assignment
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__annex_assignment
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "Assignment"
+msgstr "Təyinat"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_ir_attachment
+msgid "Attachment"
+msgstr "Qoşma"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_attendee_ids
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_attendee_ids
+msgid "Attendees"
+msgstr "İştirakçılar"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__available_annex_ids
+msgid "Available Annex"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__average_price_subtotal
+#: model_terms:ir.ui.view,arch_db:ikma_addons.view_order_line_tree_inherit_ikma_addons
+msgid "Average"
+msgstr "Ortalama"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "Baku city, \"____\""
+msgstr "Bakı şəhəri, \"____\""
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__type__base
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__service_addendum__base
+msgid "Base"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "Biz, aşağıda imza edənlər, bir tərəfdən"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "Bu əlavə ilə,"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.hr_leave_business_trip_report
+msgid "Business Trip"
+msgstr "Ezamiyyə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__businness_trip_location
+msgid "Business Trip Location"
+msgstr "Ezamiyyə yeri"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "CONFIRM:<br/>"
+msgstr "TƏSDİQ EDİRƏM:<br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "CONFIRMATION OF DELIVERY"
+msgstr "TƏHVİL TƏSLİMİN TƏSDİQİ"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_crm_equipment_type
+msgid "CRM Equipment Type"
+msgstr "CRM Avadanlıq növü"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_crm_opportunity_type
+msgid "CRM Opportunity Type"
+msgstr "CRM Fürsət Növü"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_report_wizard_form
+msgid "Cancel"
+msgstr "Ləğv et"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Cancel Contract <i class=\"fa fa-sign-out\" aria-hidden=\"True\"/>"
+msgstr "Müqaviləni ləğv et <i class=\"fa fa-sign-out\" aria-hidden=\"True\"/>"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_res_company__sale_line_sequence_product_only
+#: model:ir.model.fields,help:ikma_addons.field_res_config_settings__sale_line_sequence_product_only
+msgid "Check this to set Order line number only for product in Sale Order"
+msgstr ""
+"Yalnız Satış Sifarişində məhsul olan sifariş sətirlərinin nömrəsini təyin etmək üçün "
+"bunu işarələyin"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid ""
+"Check this to set Order line number only for product in Sale Order. Not for Section or "
+"Note."
+msgstr ""
+"Yalnız Satış Sifarişində məhsul olan sifariş sətirlərinin nömrəsini təyin etmək üçün "
+"bunu işarələyin. Bölmə və ya Qeyd üçün deyil."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "Client:<br/>"
+msgstr "Sifarişçi:<br/>"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__lost_feedback
+msgid "Closing Note"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "Commercial Agreement #"
+msgstr "Qiymət Razılaşdırma Protokolu #"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.commercial_offer_template_report
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Commercial Offer"
+msgstr "Kommersiya Təklifi"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.report_commercial_offer_with_stamp
+msgid "Commercial Offer with Stamp"
+msgstr "Möhürlü Kommersiya Təklifi"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_ikma_common
+msgid "Common Utility Functions for Addons"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_res_company
+msgid "Companies"
+msgstr "Şirkətlər"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__company_id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__company_id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__company_id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__company_id
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__company_id
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "Company"
+msgstr "Şirkət"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__company_name_short
+msgid "Company Name Short"
+msgstr "Şirkət adının qısası"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_res_config_settings
+msgid "Config Settings"
+msgstr "Parametrləri Konfiqurasiya edin"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_partner__consumption_location_id
+#: model:ir.model.fields,field_description:ikma_addons.field_res_users__consumption_location_id
+msgid "Consumption Location"
+msgstr "İstehlak yeri"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_users_form_inherit
+msgid "Consumption/Internal locations"
+msgstr "İstehlak/Daxili yerlər"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_res_partner
+#: model:ir.model.fields,field_description:ikma_addons.field_stock_scrap__partner_id
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.contract_template_report
+msgid "Contract"
+msgstr "Müqavilə"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Contract Attachments"
+msgstr "Müqavilə Qoşmaları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_date
+msgid "Contract Date"
+msgstr "Müqavilə tarixi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Contract Details"
+msgstr "Müqavilə Təfərrüatları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_end_date
+msgid "Contract End Date"
+msgstr "Müqavilə bitmə tarixi"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.sale_contract_info_action_window
+#: model:ir.ui.menu,name:ikma_addons.menu_sale_contract_info
+msgid "Contract Info"
+msgstr "Müqavilə Məlumatları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_number
+msgid "Contract Number"
+msgstr "Müqavilə nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_start_date
+msgid "Contract Start Date"
+msgstr "Müqavilə başlama tarixi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_template_id
+msgid "Contract Template"
+msgstr "Müqavilə şablonu"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.sale_contract_template_action_window
+#: model:ir.ui.menu,name:ikma_addons.menu_sale_contract_template
+msgid "Contract Templates"
+msgstr "Müqavilə Şablonları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__sale_contract_type
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__sale_contract_type
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__contract_type
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__contract_type
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__type
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_type
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_view_invoice_filter_inherit
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Contract Type"
+msgstr "Müqavilə növü"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_crm_lead2opportunity_partner
+msgid "Convert Lead to Opportunity (not in mass)"
+msgstr "Potensial Müştərini Fürsətə Çevirin (kütləvi olaraq yox)"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_executor_correspondent_acc_number
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_partner_correspondent_acc_number
+msgid "Correspondent Account(Müxbir/Hesab)"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__create_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__create_date
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order_line__order_date
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_current_address
+msgid "Current Address"
+msgstr "Faktiki ünvan"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__tta_confirming_partner_function
+msgid "Customer Job Position"
+msgstr "Müştərinin iş mövqeyi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Customers"
+msgstr "Müştərilər"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__eta_poti_date
+msgid "DATE (ETA Poti)"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.purchase_order_view_form_inherit
+msgid "DATE (Eta Poti) / VAT (ƏDV) 2024"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__date
+msgid "Date"
+msgstr "Tarix"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_view_form_inherit_ikma_addons
+msgid "Date from"
+msgstr "Tarixdən"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__spo_date
+msgid "Date of the SPO (Commercial Offer)"
+msgstr "SPO (Kommersiya Təklifi) tarixi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_view_form_inherit_ikma_addons
+msgid "Date to"
+msgstr "Tarixə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__deliver_baku
+msgid "Deliver Baku"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__delivery_time
+msgid "Delivery Time"
+msgstr "Çatdırılma vaxtı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "Director's Sign"
+msgstr "Direktorun İmzası"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+msgid "Director<br/>"
+msgstr "Direktoru<br/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "Direktoru"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__display_name
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Do you want to sign the Contract?"
+msgstr "Müqaviləni imzalamaq istəyirsiniz?"
+
+#. module: ikma_addons
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__last_updated_tta_lang__en_us
+#: model:ir.model.fields.selection,name:ikma_addons.selection__tta_report_wizard__lang__en_us
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_packages_view_form
+msgid "EN"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "EQUIPMENT"
+msgstr "AVADANLIQ"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__etd
+msgid "ETD China/Finland"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__exw
+msgid "EXW"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_mail_template
+msgid "Email Templates"
+msgstr "Email Şablonları"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Email tərtibi sehrbazı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "Equipment Numbers:"
+msgstr "Avadanlıqların nömrələri:"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__equipment_qty
+msgid "Equipment Quantity"
+msgstr "Avadanlıq sayı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__name
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__equipment_type_ids
+msgid "Equipment Type"
+msgstr "Avadanlıq növü"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.crm_equipment_type_action
+#: model:ir.ui.menu,name:ikma_addons.crm_equipment_type_menu
+msgid "Equipment Types"
+msgstr "Avadanlıq növləri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__without_handover_part
+msgid "Exclude Handover Section"
+msgstr "Təhvil-təslim xaric"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_bank_acc_number
+msgid "Executor Account Number"
+msgstr "İcraçı H/h"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_address
+msgid "Executor Address"
+msgstr "İcraçı ünvanı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_bank_code
+msgid "Executor Bank Code"
+msgstr "İcraçı bank kodu"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_bank_name
+msgid "Executor Bank Name"
+msgstr "İcraçı bank adı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_bank_swift
+msgid "Executor Bank SWIFT"
+msgstr "Icraçı bank SWIFT"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_bank_tin
+msgid "Executor Bank TIN"
+msgstr "İcraçı bank VÖEN"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_correspondent_acc_number
+msgid "Executor C/A Number"
+msgstr "İcraçı M/h"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__tta_confirming_user_function
+msgid "Executor Job Position"
+msgstr "İcraçının iş mövqeyi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_person
+msgid "Executor Person"
+msgstr "İcraçı şəxs"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_person_position
+msgid "Executor Person Position"
+msgstr "İcraçı şəxsin vəzifəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__company_recipient_bank_id
+msgid "Executor Recipient Bank"
+msgstr "İcraçı alıcı bankı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Executor Requisites"
+msgstr "İcraçı Rekvitzitləri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_executor_tin
+msgid "Executor TIN"
+msgstr "İcraçı VÖEN"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid "Executor:<br/>"
+msgstr "İcraçı:<br/>"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__is_existing_contract
+msgid "Existing Contract"
+msgstr "Mövcud Müqavilə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__existing_contract_sale_order_id
+msgid "Existing Contract's Sale Order"
+msgstr "Mövcud müqavilənin satış sifarişi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__footer_contract_attachment_ids
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Footer Attachments"
+msgstr "Sonluq Qoşmaları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__note_footer
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Footer Note"
+msgstr "Sonluq qeydi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid ""
+"For optimal performance, the total size of attached files should not exceed <b>100 MB</"
+"b>."
+msgstr ""
+"Optimal performans üçün əlavə edilmiş faylların ümumi ölçüsü <b>100 MB</b>-dan çox "
+"olmamalıdır."
+
+#. module: ikma_addons
+#: model:ir.actions.server,name:ikma_addons.button_generate_and_attach_contract
+msgid "Generate and Attach Contract"
+msgstr "Müqavilə yaradın və əlavə edin"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_crm_lead_lost
+msgid "Get Lost Reason"
+msgstr "İtirmə Səbəbini Əldə edin"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "HANDOVER:"
+msgstr "TƏHVİL VERDİ:"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__tta_handover_id
+msgid "Handover"
+msgstr "Təhvil verən"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__has_tta_attachments
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_view_sales_order_filter_inherit
+msgid "Has TTA"
+msgstr "TTA var"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__header_contract_attachment_ids
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Header Attachments"
+msgstr "Başlıq Qoşmaları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__note_header
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Header Note"
+msgstr "Başlıq qeydi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__id
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__id
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__id
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__id
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__is_ikma_contract_user
+msgid "IKMA Contract User"
+msgstr "IKMA müqavilə istifadəçisi"
+
+#. module: ikma_addons
+#: model:res.groups,name:ikma_addons.group_ikma_contract_user
+msgid "IKMA Contracts"
+msgstr "İKMA Müqavilələri"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "INV/2023/0001"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_mail_template__merge_record_attachments
+msgid ""
+"If checked, attachments from the record will be merged into the email template "
+"attachments."
+msgstr "İşarələnsə, rekorddakı qoşmalar e-poçt şablonu qoşmalarına birləşdiriləcək."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__with_confirming
+msgid "Include Executor Confirming"
+msgstr "İcraçı təsdiqi daxil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__with_handover
+msgid "Include Handover"
+msgstr "Təhvil verən daxil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__with_partner_confirming
+msgid "Include Customer Confirming"
+msgstr "Müştəri təsdiqi daxil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__with_stamp
+msgid "Include Stamp"
+msgstr "Möhür daxil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__with_transferee
+msgid "Include Transferee"
+msgstr "Təhvil alan daxil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__with_stamp
+msgid ""
+"Includes the company stamp in the report. The stamp must be set in the Company "
+"settings."
+msgstr ""
+"Hesabata şirkət möhürünü əlavə edir. Möhür Şirkət parametrlərində təyin edilməlidir."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__is_individual_partner
+msgid "Individual Customer"
+msgstr "Fərdi müştəri"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Insert your Annex Footer note here..."
+msgstr "Əlavə sonluq qeydinizi bura daxil edin..."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Insert your Annex Header note here..."
+msgstr "Əlavə başlıq qeydinizi bura daxil edin..."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "Insert your SPO (Commercial Offer) note here..."
+msgstr "SPO (Kommersiya Təklifi) qeydinizi bura daxil edin..."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_config_settings_view_form
+msgid "Insert your Service Invoice note here..."
+msgstr "Xidmət Hesab-Faktura qeydinizi bura daxil edin..."
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__installation
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__installation
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__installation
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__installation
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__installation
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Installation"
+msgstr "Quraşdırma"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Installation Addendum Type"
+msgstr "Quraşdırma addendumunun növü"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__installation_total_price
+msgid "Installation Total Price"
+msgstr "Quraşdırmanın ümumi qiyməti"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_partner__internal_location_id
+#: model:ir.model.fields,field_description:ikma_addons.field_res_users__internal_location_id
+msgid "Internal Location"
+msgstr "Daxili yer"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.action_report_invoice_with_stamp
+msgid "Invoice with Stamp"
+msgstr "Möhürlü Hesab Faktura"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__is_lift_service
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__is_lift_service
+msgid "Is Lift Service?"
+msgstr "Lift servisidir?"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__tta_handover_function
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__tta_transferee_function
+msgid "Job Position"
+msgstr "İş mövqeyi"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_account_move
+msgid "Journal Entry"
+msgstr "Jurnal Girişi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "LOAD CAPACITY (kg)"
+msgstr "YÜK TUTUMU (kq)"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__lang
+msgid "Language"
+msgstr "Dil"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__last_updated_tta_date
+msgid "Last Updated TTA Date"
+msgstr "Son Yenilənmiş TTA Tarixi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__last_updated_tta_lang
+msgid "Last Updated TTA Lang"
+msgstr "Son Yenilənmiş TTA Dili"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__write_uid
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_equipment_type__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__write_date
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Hədəf Müştəri/Fürsət"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.hr_leave_approval_report
+msgid "Leave Approval"
+msgstr "Məzuniyyət Təsdiqi"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.hr_leave_approval_self_employed_report
+msgid "Leave Approval Self Employed"
+msgstr "Öz Hesabına Məzuniyyət Təsdiqi"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.hr_leave_request_report
+msgid "Leave Request"
+msgstr "Məzuniyyət Sorğusu"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.hr_leave_request_self_employed_report
+msgid "Leave Request Self Employed"
+msgstr "Öz Hesabına Məzuniyyət Sorğusu"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.product_template_common_inherit
+msgid "Lift Details"
+msgstr "Lift Təfərrüatları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_load_capacity
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_load_capacity
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_load_capacity
+msgid "Load Capacity (kg)"
+msgstr "Yük tutumu (kq)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.purchase_order_view_form_inherit
+msgid "Logistics"
+msgstr "Logistika"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Logo"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.pdf_export_main_customer_report_inherit_ikma
+msgid "M.Y"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Main Details"
+msgstr "Əsas Təfərrüatlar"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__max_line_sequence
+msgid "Max sequence in lines"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__max_line_sequence2
+msgid "Max sequence in lines Show"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_mail_template__merge_record_attachments
+msgid "Merge Record Attachments"
+msgstr "Rekordun qoşmalarını birləşdir"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "Modify Annex values here"
+msgstr "Əlavə dəyərlərini burada dəyişdirin"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "Modify Commercial Offer values here"
+msgstr "Kommersiya Təklifi dəyərlərini burada dəyişdirin"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__month
+msgid "Month"
+msgstr "Ay"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid ""
+"Monthly technical service cost for equipment: \n"
+"                        ("
+msgstr ""
+"Avadanlıqlar üzrə aylıq texniki xidmətin dəyəri: \n"
+"                        ("
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "NUMBER"
+msgstr "NÖMRƏSİ"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "NUMBER OF FLOORS"
+msgstr "MƏRTƏBƏ SAYI"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "NUMBER OF STOPS"
+msgstr "DAYANACAQ SAYI"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__name
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__name
+msgid "Name"
+msgstr "Ad"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/crm_lead.py:0
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid "New"
+msgstr "Yeni"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__none
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__none
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__none
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__none
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__none
+msgid "None"
+msgstr "Heç biri"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Not Signed"
+msgstr "İmzalanmamış"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__note_az
+msgid "Note AZ"
+msgstr "Qeyd AZ"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_packages__note_en
+msgid "Note EN"
+msgstr "Qeyd EN"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_config_settings_view_form
+msgid "Note will be printed on bottom of the Service Invoice."
+msgstr "Qeyd Xidmət Hesab-Fakturasının aşağı hissəsində çap olunacaq."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__opportunity_no
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_number
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_number
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_number
+#: model_terms:ir.ui.view,arch_db:ikma_addons.view_crm_case_opportunities_filter_inherit_ikma_addons
+msgid "Number"
+msgstr "Nömrə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_floor_number
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_floor_number
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_floor_number
+msgid "Number of Floors"
+msgstr "Mərtəbə sayı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__spo_count
+msgid "Number of SPO (Commercial Offers) related to this order"
+msgstr "Bu sifarişlə bağlı SPO (Kommersiya Təklifləri) sayı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_stop_number
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_stop_number
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_stop_number
+msgid "Number of Stops"
+msgstr "Dayanacaq sayı"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__type__obligations
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__installation_addendum__obligations
+msgid "Obligations"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+msgid "Obligations of the parties"
+msgstr ""
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid "Only PDF attachments are allowed for contract headers and footers."
+msgstr "Müqavilə başlıqları və sonluqları üçün yalnız PDF qoşmalarına icazə verilir."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__opportunity_no
+msgid "Opportunity Number"
+msgstr "Fürsət nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead2opportunity_partner__opportunity_type_id
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead2opportunity_partner_mass__opportunity_type_id
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__opportunity_type_id
+#: model_terms:ir.ui.view,arch_db:ikma_addons.view_crm_case_opportunities_filter_inherit_ikma_addons
+msgid "Opportunity Type"
+msgstr "Fürsət növü"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.crm_opportunity_type_action
+#: model:ir.ui.menu,name:ikma_addons.crm_opportunity_type_menu
+msgid "Opportunity Types"
+msgstr "Fürsət növləri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_annex_report_wizard__order_id
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__order_id
+msgid "Order"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__order_date
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__order_date
+msgid "Order Date"
+msgstr "Əmr tarixi"
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.action_sale_order_line_views_from_ikma_addon
+#: model:ir.ui.menu,name:ikma_addons.menu_sale_order_lines
+msgid "Order Lines"
+msgstr "Sifariş Sətirləri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__order_number
+msgid "Order Number"
+msgstr "Əmr nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__order_id
+msgid "Order Reference"
+msgstr "Sifariş istinadı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "Order State"
+msgstr "Sifariş vəziyyəti"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__order_state
+msgid "Order Status"
+msgstr "Sifariş Statusu"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "Order Subscription State"
+msgstr "Sifariş abunəlik vəziyyəti"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__sale_line_sequence_product_only
+#: model:ir.model.fields,field_description:ikma_addons.field_res_config_settings__sale_line_sequence_product_only
+msgid "Order line number only for product"
+msgstr "Yalnız məhsullar olan sifariş sətirlərinin nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__origin
+msgid "Origin"
+msgstr "Mənbə Sənəd"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_tta_package_line__package_id
+msgid "Package"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_packages_view_form
+msgid "Package Name.."
+msgstr "Paket Adı..."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__tta_package_month_ids
+msgid "Package for Months"
+msgstr "Aylar üçün paket"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Packages"
+msgstr "Paketlər"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "Packages will be create automatically after confirming of selected Order"
+msgstr "Seçilmiş Sifariş təsdiqləndikdən sonra paketlər avtomatik olaraq yaradılacaq"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__company_partner_id
+msgid "Customer"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_bank_acc_number
+msgid "Customer Account Number"
+msgstr "Müştəri H/h"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_address
+msgid "Customer Address"
+msgstr "Müştəri ünvanı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_bank_code
+msgid "Customer Bank Code"
+msgstr "Müştəri bank kodu"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_bank_name
+msgid "Customer Bank Name"
+msgstr "Müştəri bank adı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_bank_swift
+msgid "Customer Bank SWIFT"
+msgstr "Müştəri Bank SWIFT"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_bank_tin
+msgid "Customer Bank TIN"
+msgstr "Müştəri bank VÖEN"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_birthday
+msgid "Customer Birthday"
+msgstr "Müştəri doğum tarixi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_correspondent_acc_number
+msgid "Customer C/A Number"
+msgstr "Müştəri M/h"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_company
+msgid "Customer Company"
+msgstr "Müştəri şirkət"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_company_short
+msgid "Customer Company Short"
+msgstr "Müştəri şirkətin qısası"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_account_partner_ledger_report_handler
+msgid "Customer Ledger Custom Handler"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_passport_fin
+msgid "Customer Passport FIN"
+msgstr "Müştəri Pasport FIN"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_passport_serial_number
+msgid "Customer Passport S/N"
+msgstr "Müştəri Pasport S/N"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_person
+msgid "Customer Person"
+msgstr "Müştəri şəxs"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_person_position
+msgid "Customer Person Position"
+msgstr "Müştəri şəxsin vəzifəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__partner_recipient_bank_id
+msgid "Customer Recipient Bank"
+msgstr "Müştəri alıcı bankı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Customer Requisites"
+msgstr "Müştəri Rekvizitləri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__contract_partner_tin
+msgid "Customer TIN"
+msgstr "Müştəri VÖEN"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_passport_deadline
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_passport_deadline
+msgid "Passport Deadline"
+msgstr "Pasportun son tarixi"
+
+#. module: ikma_addons
+#: model:ir.actions.server,name:ikma_addons.ir_cron_passport_deadline_reminder_ir_actions_server
+msgid "Passport Deadline Reminder"
+msgstr "Pasport üçün son tarix xatırlatması"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.product_template_common_inherit
+msgid "Passport Details"
+msgstr "Pasport Təfərrüatları"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/crm_lead.py:0
+msgid ""
+"Please select an Opportunity Type with a prefix before creating or converting an "
+"opportunity."
+msgstr ""
+"Zəhmət olmasa, fürsət yaratmazdan və ya çevirməzdən əvvəl prefiksi olan Fürsət növünü "
+"seçin."
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/wizard/tta_report_wizard.py:0
+msgid "Please select at least one Sale Order."
+msgstr "Zəhmət olmasa, ən azı bir Satış Sifarişi seçin."
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_opportunity_type__prefix
+msgid "Prefix"
+msgstr "Prefiks"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_crm_opportunity_type__prefix
+msgid "Prefix for the sequence number of opporunities in this type."
+msgstr "Bu növ üzrə fürsətlərin ardıcıllıq nömrəsi üçün prefiks."
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__type__premium
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__service_addendum__premium
+msgid "Premium"
+msgstr ""
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__type__premium_plus
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__service_addendum__premium_plus
+msgid "Premium +"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_report_wizard_form
+msgid "Print"
+msgstr "Çap et"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_product_template
+msgid "Product"
+msgstr "Məhsul"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_project_project
+msgid "Project"
+msgstr "Layihə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_crm_lead__project_location
+msgid "Project Location"
+msgstr "Layihə yeri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__project_name
+msgid "Project Name"
+msgstr "Layihə adı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__sale_project_number
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__sale_project_number
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__project_number
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_view_invoice_filter_inherit
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_view_sales_order_filter_inherit
+msgid "Project Number"
+msgstr "Layihə nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_account_bank_statement_line__sale_project_number
+#: model:ir.model.fields,help:ikma_addons.field_account_move__sale_project_number
+msgid "Project number of the Sale Order"
+msgstr "Satış sifarişinin layihə nömrəsi"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_purchase_order
+msgid "Purchase Order"
+msgstr "Satınalma Sifarişi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.project_add_purchase_smart_button
+msgid "Purchases"
+msgstr "Satınalmalar"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "Purpose of payment: Monthly maintenance"
+msgstr "Ödənişin təyinatı: Aylıq texniki xidmət"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Quraşdırma"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__recurring_per_line
+msgid "Recurring Per Line"
+msgstr "Sətir başı təkrarlanan məbləğ"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_purchase_order__origin
+msgid ""
+"Reference of the document that generated this purchase order request (e.g. a sales "
+"order)"
+msgstr "Bu satınalma sifarişi sorğusunu yaradan sənədə istinad (məsələn, satış sifarişi)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.crm_lead_view_form_inherit_ikma_addons
+msgid "Regenerate Prefix"
+msgstr "Prefiksi yenidən yarat"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__annex_ids
+msgid "Related Annexes"
+msgstr "Əlaqədar əlavələr"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid "Related SPO Orders"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__existing_contract_sale_order_id
+msgid "Related Sale Order"
+msgstr "Əlaqəli Satış Sifarişi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_product_product__lift_warning_days
+#: model:ir.model.fields,help:ikma_addons.field_product_template__lift_warning_days
+msgid "Reminder days before deadline."
+msgstr "Son tarixdən günlər əvvəlki xatırlatma."
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_tta_report_wizard__without_handover_part
+msgid "Removes both the handover and transferee sections from the report."
+msgstr "Hesabatdan həm təhvil verən, həm də təhvil alan bölmələrini silir."
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_ir_actions_report
+msgid "Report Action"
+msgstr "Hesabat Hərəkəti"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "SERVICE VALUE (AZN)"
+msgstr "XİDMƏTİN DƏYƏRİ (AZN)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "SO0000"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "SPEED (m/s)"
+msgstr "SÜRƏT (m/s)"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__spo
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__spo
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__spo
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__spo
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__spo
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "SPO"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__spo_count
+msgid "SPO Count"
+msgstr "SPO sayı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__spo_date
+msgid "SPO Date"
+msgstr "SPO tarixi"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__spo_note
+#: model:ir.model.fields,field_description:ikma_addons.field_res_config_settings__spo_note
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__spo_note
+msgid "SPO Note"
+msgstr "SPO qeydi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "SPOs"
+msgstr "SPO-lar"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_addendum_template
+msgid "Sale Addendum Template"
+msgstr "Satış Addendumu Şablonu"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_annex
+msgid "Sale Annex"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_contract_template
+msgid "Sale Contract Template"
+msgstr "Satış Müqaviləsi Şablonu"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.app_res_config_settings_view_form
+msgid "Sale Contracts"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_order_tta_package_line
+msgid "Sale Order TTA Package Line"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_project_project__sale_purchase_count
+msgid "Sale Purchase Count"
+msgstr "Satışın satınalmasının sayı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Sales"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_order
+msgid "Sales Order"
+msgstr "Satış Sifarişi"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Satış Sifarişi Sətri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_tta_report_wizard__order_ids
+msgid "Sales Orders"
+msgstr "Satış Sifarişləri"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_stock_scrap
+msgid "Scrap"
+msgstr "İstifadəyə yararsız"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/crm_lead.py:0
+msgid "Select an opportunity type first!"
+msgstr "Əvvəlcə fürsət növünü seçin!"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_annex_report_wizard__annex_ids
+msgid "Selected Annexes will be printed"
+msgstr "Seçilmiş Əlavələr çap olunacaq"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_ir_attachment__sequence
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__sequence
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__sequence2
+msgid "Sequence"
+msgstr "Ardıcıllıq"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__service
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__service
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__service
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__service
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__service
+msgid "Service"
+msgstr "Xidmət"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Service Addendum Type"
+msgstr "Xidmət addendumunun növü"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.service_invoice_report
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_config_settings_view_form
+msgid "Service Invoice"
+msgstr "Xidmət Hesab Fakturası"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__service_invoice_description
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__service_invoice_description
+msgid "Service Invoice Description"
+msgstr "Xidmət Hesab Faktura təsviri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__service_invoice_month_count
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__service_invoice_month_count
+msgid "Service Invoice Month Count"
+msgstr "Xidmət Hesab Faktura ay sayı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__service_invoice_note
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__service_invoice_note
+#: model:ir.model.fields,field_description:ikma_addons.field_res_company__service_invoice_note
+#: model:ir.model.fields,field_description:ikma_addons.field_res_config_settings__service_invoice_note
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_config_settings_view_form
+msgid "Service Invoice Note"
+msgstr "Xidmət Hesab Faktura qeydi"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.service_invoice_with_stamp_report
+msgid "Service Invoice with Stamp"
+msgstr "Möhürlü Xidmət Hesab Fakturası"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "Sign Contract <i class=\"fa fa-sign-in\" aria-hidden=\"True\"/>"
+msgstr "Müqaviləni imzala <i class=\"fa fa-sign-in\" aria-hidden=\"True\"/>"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_info_view_search
+msgid "Signed"
+msgstr "İmzalı"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__signed_contract
+msgid "Signed Contract"
+msgstr "İmzalanmış müqavilə"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "Sizdən xahiş edirəm ki,"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "Sizdən xahiş edirəm ki, mənə"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_executor_bank_code
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_partner_bank_code
+msgid "Sometimes called BIC or Swift."
+msgstr ""
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__spare_parts
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__spare_parts
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__spare_parts
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__spare_parts
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__spare_parts
+msgid "Spare Parts"
+msgstr "Ehtiyat Hissələri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_speed
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_speed
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_speed
+msgid "Speed (m/s)"
+msgstr "Sürət (m/s)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.account_report_invoice_document_inherit
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "Stamp"
+msgstr "Möhür"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__type__standard
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__service_addendum__standard
+msgid "Standard"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__stuffling
+msgid "Stuffling"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__order_subscription_state
+msgid "Subscription Status"
+msgstr "Abunəlik vəziyyəti"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__supply
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__supply
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__supply
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__supply
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__supply
+msgid "Supply"
+msgstr "Təchizat"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "TRANSFEREE:"
+msgstr "TƏHVİL ALDI:"
+
+#. module: ikma_addons
+#: model:ir.actions.report,name:ikma_addons.tta_template_report
+#: model:ir.actions.server,name:ikma_addons.button_tta_report
+#: model:ir.actions.server,name:ikma_addons.button_tta_report_from_annex
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_form
+msgid "TTA"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "TTA #"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__tta_attachment_ids
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "TTA Attachments"
+msgstr "TTA Qoşmaları"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__tta_confirming_partner_id
+msgid "TTA Confirming Customer"
+msgstr "TTA təsdiq edən müştəri"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order__tta_confirming_user_id
+msgid "TTA Confirming Executor"
+msgstr "TTA təsdiq edən icraçı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "TTA Details"
+msgstr "TTA Təfərrüatları"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "TTA Handover"
+msgstr "TTA Təhvil verən"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_packages_view_form
+msgid "TTA Note in AZ..."
+msgstr "AZ-da TTA Qeydi..."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_packages_view_form
+msgid "TTA Note in EN..."
+msgstr "EN-də TTA Qeydi..."
+
+#. module: ikma_addons
+#: model:ir.actions.act_window,name:ikma_addons.tta_packages_action_window
+#: model:ir.model,name:ikma_addons.model_tta_packages
+#: model:ir.ui.menu,name:ikma_addons.menu_tta_packages
+msgid "TTA Packages"
+msgstr "TTA Paketləri"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_tta_report_wizard
+msgid "TTA Report Wizard"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_annex_view_search
+msgid "TTA Transferee"
+msgstr "TTA Təhvil alan"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "TYPE"
+msgstr "NÖVÜ"
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_project_task
+msgid "Task"
+msgstr "Tapşırıq"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Technical Service"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__arch
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__arch
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_addendum_template_view_form
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_template_view_form
+msgid "Template"
+msgstr "Şablon"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_addendum_template__name
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_contract_template__name
+msgid "Template Name"
+msgstr "Şablon adı"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "Texniki xidmət"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_executor_tin
+#: model:ir.model.fields,help:ikma_addons.field_sale_order__contract_partner_tin
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the country "
+"format. You can use '/' to indicate that the partner is not subject to tax."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_order_view_order_form_inherit
+msgid "The size of an attached file must not exceed <b>134 MB</b>."
+msgstr "Əlavə edilmiş faylın ölçüsü <b>134 MB</b>-dan çox olmamalıdır."
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_hr_leave
+msgid "Time Off"
+msgstr "Məzuniyyət"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_account_bank_statement_line__text_amount
+#: model:ir.model.fields,field_description:ikma_addons.field_account_move__text_amount
+msgid "Total in Words"
+msgstr "Sözlərlə cəmi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.add_text_amount_to_invoice_form
+msgid "Total in Words:"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_stock_picking
+msgid "Transfer"
+msgstr "Köçürmə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_annex__tta_transferee_id
+msgid "Transferee"
+msgstr "Təhvil alan"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+#: model:ir.model.fields.selection,name:ikma_addons.selection__account_move__sale_contract_type__turnkey
+#: model:ir.model.fields.selection,name:ikma_addons.selection__crm_opportunity_type__contract_type__turnkey
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_addendum_template__contract_type__turnkey
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_contract_template__type__turnkey
+#: model:ir.model.fields.selection,name:ikma_addons.selection__sale_order__contract_type__turnkey
+msgid "Turnkey"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_type
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_type
+#: model:ir.model.fields,field_description:ikma_addons.field_sale_order_line__lift_type
+msgid "Type"
+msgstr "Növ"
+
+#. module: ikma_addons
+#: model:ir.model.fields,help:ikma_addons.field_crm_opportunity_type__contract_type
+msgid "Type of contract associated with this opportunity type."
+msgstr "Bu fürsət növü ilə əlaqəli müqavilə növü."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "TƏQDİMAT №"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model,name:ikma_addons.model_res_users
+msgid "User"
+msgstr "İstifadəçi"
+
+#. module: ikma_addons
+#: model:res.groups,comment:ikma_addons.group_ikma_contract_user
+msgid "Users with access to IKMA contracts functionality"
+msgstr "İKMA müqavilələrinin funksionallığına icazəsi olan istifadəçilər"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_purchase_order__vat_edv
+msgid "VAT (ƏDV)"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_product_product__lift_warning_days
+#: model:ir.model.fields,field_description:ikma_addons.field_product_template__lift_warning_days
+msgid "Warning Days"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "We, the undersigned, on one hand, the authorized representative of"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid ""
+"With this addendum, the following additional terms are defined for the contract No."
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__working_start_date
+msgid "Working Start Date"
+msgstr "İşə başlama tarixi"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_view_form_inherit_ikma_addons
+msgid "Working Year"
+msgstr "İş ili"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__working_year_from
+msgid "Working Year From"
+msgstr "İş ilindən"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_hr_leave__working_year_to
+msgid "Working Year To"
+msgstr "İş ilinə"
+
+#. module: ikma_addons
+#: model:ir.model.fields,field_description:ikma_addons.field_stock_picking__ygb_ref
+msgid "YGB Reference"
+msgstr "YGB İstinadı"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid ""
+"You cannot change the Contract status in this state: %s. If you need to change status, "
+"Set to Quotation."
+msgstr ""
+"Siz bu vəziyyətdə Müqavilə statusunu dəyişə bilməzsiniz: %s. Vəziyyəti dəyişmək "
+"lazımdırsa, Qiymət təklifinə təyin edin."
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.service_invoice_document
+msgid "__"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.pdf_export_main_customer_report_inherit_ikma
+msgid "____________________      __________      (__________)"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_template
+msgid ""
+"_______________________________\n"
+"                                    <br/>\n"
+"                                    (sign, stamp)"
+msgstr ""
+"_______________________________\n"
+"                                    <br/>\n"
+"                                    (imza, möhür)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ""
+"_______________________________\n"
+"                                <br/>\n"
+"                                (sign)"
+msgstr ""
+"_______________________________\n"
+"                                <br/>\n"
+"                                (imza)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid ""
+"_______________________________\n"
+"                                <br/>\n"
+"                                (sign, stamp)"
+msgstr ""
+"_______________________________\n"
+"                                <br/>\n"
+"                                (imza, möhür)"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "and"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "arasında imzalanmış"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "based on the"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "contract №"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "cəmiyyətin"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "dated"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_addendum_template_view_form
+msgid "e.g. Base Addendum Template"
+msgstr "məs. Base Addendum Şablonu"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.sale_contract_template_view_form
+msgid "e.g. Service Contract Template"
+msgstr "məs. Xidmət Müqavilə Şablonu"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_view_form_inherit_ikma_addons
+msgid "e.g. to Ismayilli"
+msgstr "məs. İsmayıllıya"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "ezam olunur.<br/>"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "goods"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "goods, works, and services"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "ilə"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+msgid "ilə bağlı aşağıda adı qeyd edilmiş əməkdaş"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "iş ili üçün"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "işləri"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "listed below have been delivered and accepted."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "malları"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "malları, işləri və xidmətləri"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+msgid "müqaviləsinə ƏLAVƏ"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "məzuniyyət verilsin."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "numbered contract between the aforementioned parties, that the"
+msgstr "numbered contract between the aforementioned parties, that the goods"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "numbered procurement agreement signed as an addendum to the"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "nömrəli müqaviləyə"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "nömrəli satınalma razılaşdırılmasına"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.annex_template_report
+msgid "object._get_print_report_name('Annex #' + object.name)"
+msgstr "object._get_print_report_name('Əlavə #' + object.name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.commercial_offer_template_report
+msgid "object._get_print_report_name('Commercial Offer #' + object.name)"
+msgstr "object._get_print_report_name('Kommersiya Təklifi #' + object.name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.report_commercial_offer_with_stamp
+msgid "object._get_print_report_name('Commercial Offer with Stamp #' + object.name)"
+msgstr "object._get_print_report_name('Möhürlü Kommersiya Təklifi #' + object.name)"
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.tta_template_report
+msgid ""
+"object._get_print_report_name('TTA ' + "
+"dict(object._fields['last_updated_tta_lang'].selection).get(object.last_updated_tta_lang) "
+"+ ' #' + object.name + '/' + object.last_updated_tta_date.strftime('%m/%Y'))"
+msgstr ""
+
+#. module: ikma_addons
+#: model:ir.actions.report,print_report_name:ikma_addons.contract_template_report
+msgid ""
+"object._get_print_report_name((dict(object._fields['contract_type'].selection).get(object.contract_type) "
+"or '') + ' Contract #' + (object.contract_number or ''))"
+msgstr ""
+"object._get_print_report_name((dict(object._fields['contract_type'].selection).get(object.contract_type) "
+"or '') + ' Müqavilə #' + (object.contract_number or ''))"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "saylı"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "saylı,"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "services"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "tarixindən"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "tarixinədək"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.addendum_layout
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+#: model_terms:ir.ui.view,arch_db:ikma_addons.commercial_offer_layout_boxed
+msgid "tarixli"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "tarixli müqaviləyə dair aşağıdakı əlavə şərtləri müəyyən etdilər:"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_layout_boxed
+msgid "to the"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "təhvil-təslim etdik."
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_business_trip_template
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "tərəfindən"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "və"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_request_template
+msgid "vəzifəsində çalışan"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "works"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "xidmətləri"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "öz hesabına ödənişsiz"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid ""
+"üzrə<br/><br/>\n"
+"                                ƏMR №"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.hr_leave_approval_template
+msgid "İşçi"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "şəxsində təmsil olunan gələcəkdə “Sifarişçi” adlandırılacaq"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.annex_template
+msgid "şəxsində təmsil olunan gələcəkdə “İcraçı” adlandırılacaq"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "əlavə olaraq imzalanmış"
+msgstr ""
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.tta_template
+msgid "əsasən təsdiq edirik ki, aşağıda qeyd olunan"
+msgstr "əsasən təsdiq edirik ki, aşağıda qeyd olunan malları"
+
+#. module: ikma_addons
+#: model_terms:ir.ui.view,arch_db:ikma_addons.res_company_view_order_form_inherit
+msgid "“IKMA LIFT” MMC"
+msgstr "“İKMA LIFT” MMC"
+
+#. module: ikma_addons
+#. odoo-python
+#: code:addons/ikma_addons/models/sale_order.py:0
+msgid ""
+"⚠️ Please fill the following fields before proceeding:\n"
+"\n"
+"%s"
+msgstr ""
+"⚠️ Davam etməzdən əvvəl aşağıdakı xanaları doldurun:\n"
+"\n"
+"%s"

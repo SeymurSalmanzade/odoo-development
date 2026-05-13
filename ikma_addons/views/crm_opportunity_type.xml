@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="crm_opportunity_type_view_list" model="ir.ui.view">
+            <field name="name">crm.opportunity.type.view.list</field>
+            <field name="model">crm.opportunity.type</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="prefix"/>
+                    <field name="contract_type"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="crm_opportunity_type_view_form" model="ir.ui.view">
+            <field name="name">crm.opportunity.type.view.form</field>
+            <field name="model">crm.opportunity.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group colspan="1">
+                            <field name="name" required="True"/>
+                            <field name="prefix" required="True"/>
+                            <field name="contract_type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

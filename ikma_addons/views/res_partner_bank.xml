@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_bank_inherited_form">
+            <field name="name">ResPartnerBank:InheritedForm</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+              <xpath expr="//field[@name='acc_number']" position="after">
+                <field name="correspondent_bank_name"/>
+                <field name="correspondent_bank_swift"/>
+                <field name="muxbir_hesab"/>
+              </xpath>
+            </field>
+          </record>
+
+          <record model="ir.ui.view" id="res_partner_bank_wizard_inherited_form">
+            <field name="name">ResPartnerBankWizard:inheritedForm</field>
+            <field name="model">account.setup.bank.manual.config</field>
+            <field name="inherit_id" ref="account.setup_bank_account_wizard"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='acc_number']" position="after">
+                  <field name="correspondent_bank_name"/>
+                  <field name="correspondent_bank_swift"/>    
+                  <field name="muxbir_hesab"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

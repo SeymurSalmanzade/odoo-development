@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="res_bank_inherited_form">
+      <field name="name">ResBank:InheritedForm</field>
+      <field name="model">res.bank</field>
+      <field name="inherit_id" ref="base.view_res_bank_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='bic']" position="after">
+          <field name="tax_id"/>
+          <field name="swift"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

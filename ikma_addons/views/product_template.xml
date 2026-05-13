@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <record id="product_template_common_inherit" model="ir.ui.view">
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="mode">extension</field>
+      <field name="model">product.template</field>
+      <field name="name">Product Template common view form inherit</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//field[@name='type']" position="after">
+            <field name="is_lift_service" invisible="type != 'service'"/>
+          </xpath>
+          <xpath expr="//page[@name='general_information']/group[1]" position="after">
+            <group invisible="not is_lift_service">
+              <group string="Lift Details">
+                  <field name="lift_number"/>
+                  <field name="lift_type"/>
+                  <field name="lift_supply_line" groups="ikma_addons.group_ikma_georgia_user"/>
+                  <field name="lift_speed"/>
+                  <field name="lift_load_capacity"/>
+                  <field name="lift_floor_number"/>
+                  <field name="lift_stop_number"/>
+              </group>
+              <group string="Passport Details" groups="ikma_addons.group_ikma_azerbaijan_user">
+                <field name="lift_passport_deadline"/>
+                <field name="lift_warning_days"/>
+                <field name="lift_attendee_ids" widget="many2many_tags" domain="[('share', '=', False), ('active', '=', True)]"/>
+              </group>
+            </group>
+          </xpath>
+        </data>
+      </field>
+    </record>
+    </data>
+</odoo>

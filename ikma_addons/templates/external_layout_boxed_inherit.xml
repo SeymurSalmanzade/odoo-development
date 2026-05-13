@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="external_layout_boxed_inherited" inherit_id="web.external_layout_boxed">
+            <xpath expr="//img" position="attributes">
+                <attribute name="style" add="max-height: 100px; max-width: 160px;"/>
+            </xpath>
+            <!-- <xpath expr="//div[hasclass('o_footer_content')]/div[2]" position="replace"/> -->
+        </template>
+    </data>
+</odoo>

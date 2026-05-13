@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <template id="commercial_offer_layout_boxed" inherit_id="web.external_layout_boxed" primary="True">
+            <xpath expr="/t/div[1]" position="before">
+                <t t-if="not o" t-set="o" t-value="doc"/>
+
+                <t t-if="not company">
+                    <!-- Multicompany -->
+                    <t t-if="company_id">
+                        <t t-set="company" t-value="company_id"/>
+                    </t>
+                    <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-else="else">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                </t>
+            </xpath>
+            
+            <xpath expr="//div[contains(@t-attf-class, 'header')]/div[1]" position="attributes">
+                <attribute name="t-if">doc.contract_type == 'none' and not doc.is_existing_contract</attribute>
+            </xpath>
+
+            <xpath expr="//div[contains(@t-attf-class, 'header')]" position="inside">
+                <div t-else="" class="row mb-2">
+                    <div class="col-2">
+                        <img t-if="company.logo"
+                            style="max-height: 100px; max-width: 160px;"
+                            t-att-src="image_data_uri(company.logo)"
+                            alt="Logo"/>
+                    </div>
+                    <div class="p-0 col-10 text-center">
+                        <t t-set="sale_order" t-value="doc.existing_contract_sale_order_id if doc.is_existing_contract else doc"/>
+                        <p style="font-size: large;" class="fw-bolder">
+                            <t t-if="sale_order.partner_id.lang == 'en_US'">
+                                Addendum to the <span t-if="sale_order.contract_type == 'service'">Technical Service</span>
+                                <span t-elif="sale_order.contract_type == 'installation'">Installation</span>
+                                <span t-elif="sale_order.contract_type == 'spare_parts'">Sales</span>
+                                contract № <span t-field="sale_order.contract_number"/>, dated <span t-out="doc._get_format_date(sale_order.contract_date)"/>, signed between <span t-field="company.company_name_short"/> and <span t-field="sale_order.contract_partner_company_short"/>.
+                            </t>
+                            <t t-elif="sale_order.partner_id.lang == 'az_AZ'">
+                                <span t-field="company.company_name_short"/> ilə <span t-field="sale_order.contract_partner_company_short"/> arasında imzalanmış <span t-field="sale_order.contract_number"/> saylı, <span t-out="doc._get_format_date(sale_order.contract_date)"/> tarixli
+                                <span t-if="sale_order.contract_type == 'service'">Texniki xidmət</span>
+                                <span t-elif="sale_order.contract_type == 'installation'">Quraşdırma</span>
+                                <span t-elif="sale_order.contract_type == 'spare_parts'">Alqı-satqı</span>
+                                <span>müqaviləsinə ƏLAVƏ</span>
+                            </t>
+                        </p>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[3]" position="replace">
+                <div t-attf-class="footer o_company_#{company.id}_layout {{report_type != 'pdf' and 'mt-auto'}} border-0">
+                    <!--  -->
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="crm_equipment_type_view_list" model="ir.ui.view">
+            <field name="name">crm.equipment.type.view.list</field>
+            <field name="model">crm.equipment.type</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="crm_equipment_type_view_form" model="ir.ui.view">
+            <field name="name">crm.equipment.type.view.form</field>
+            <field name="model">crm.equipment.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group colspan="1">
+                            <field name="name" required="True"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

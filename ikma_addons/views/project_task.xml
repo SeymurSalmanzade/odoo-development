@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="project_task_form_view_inherit" model="ir.ui.view">
+          <field name="name">project.task.form.inherit</field>
+          <field name="model">project.task</field>
+          <field name="inherit_id" ref="project.view_task_form2" />
+          <field name="arch" type="xml">
+              <xpath expr="//sheet/group/group[1]/field[@name='user_ids']" position="attributes">
+                <attribute name="domain" add="[('active', '=', True)]"/>
+              </xpath>
+              <field name="tag_ids" position="after">
+                <field name="elevator_number" groups="ikma_addons.group_ikma_georgia_user"/>
+                <field name="lift_product_id" groups="ikma_addons.group_ikma_georgia_user"/>
+                <field name="equipment_number" groups="ikma_addons.group_ikma_georgia_user"/>
+              </field>
+          </field>
+        </record>
+
+        <record id="project_view_task_kanban_inherit_ikma_addons" model="ir.ui.view">
+          <field name="name">project.view.task.kanban.inherit.ikma.addons</field>
+          <field name="model">project.task</field>
+          <field name="inherit_id" ref="project.view_task_kanban"/>
+          <field name="arch" type="xml">
+            <field name="user_ids" position="attributes">
+              <attribute name="domain" add="[('active', '=', True)]"/>
+            </field>
+          </field>
+        </record>
+
+        <record id="project_task_view_tree_main_base_inherit_ikma_addons" model="ir.ui.view">
+          <field name="name">project.task.view.tree.main.base.inherit.ikma.addons</field>
+          <field name="model">project.task</field>
+          <field name="inherit_id" ref="project.project_task_view_tree_main_base"/>
+          <field name="arch" type="xml">
+            <field name="user_ids" position="attributes">
+              <attribute name="domain" add="[('active', '=', True)]"/>
+            </field>
+          </field>
+        </record>
+      </data>
+
+      <record id="quick_create_task_form_inherit_ikma_addons" model="ir.ui.view">
+        <field name="name">quick.create.task.form.inherit.ikma.addons</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.quick_create_task_form"/>
+        <field name="arch" type="xml">
+          <field name="user_ids" position="attributes">
+            <attribute name="domain" add="[('active', '=', True)]"/>
+          </field>
+        </field>
+      </record>
+</odoo>

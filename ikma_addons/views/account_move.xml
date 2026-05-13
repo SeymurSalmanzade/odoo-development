@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <record id="account_view_invoice_filter_inherit" model="ir.ui.view">
+            <field name="name">account.view.invoice.filter.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="filter_domain">[
+                        '|', '|' , '|', '|', '|',
+                        ('name', 'ilike', self), ('invoice_origin', 'ilike', self),
+                        ('ref', 'ilike', self), ('payment_reference', 'ilike', self),
+                        ('partner_id', 'child_of', self), ('sale_project_number', 'ilike', self)]
+                    </attribute>
+                </field>
+                <field name="name" position="after">
+                    <field name="sale_project_number" string="Project Number" filter_domain="[('sale_project_number', 'ilike', self)]" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <field name="sale_contract_type" string="Contract Type" filter_domain="[('sale_contract_type', 'ilike', self)]" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </field>
+                <filter name="partner" position="before">
+                    <filter string="Project Number" name="group_by_sale_project_number" context="{'group_by': 'sale_project_number'}" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <filter string="Contract Type" name="group_by_sale_contract_type" context="{'group_by': 'sale_contract_type'}" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </filter>
+            </field>
+        </record>
+        <record id="account_move_view_invoice_tree_inherit" model="ir.ui.view">
+            <field name="name">account.move.view.invoice.tree.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="sale_project_number" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <field name="sale_contract_type" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </field>
+            </field>
+        </record>
+        <record id="add_text_amount_to_invoice_form" model="ir.ui.view">
+            <field name="name">add.text.amount.to.invoice.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <label for="partner_id" position="before">
+                    <field name="sale_project_number" readonly="1" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <field name="sale_contract_type" readonly="1" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </label>
+                <xpath expr="//page[@id='invoice_tab']/group" position="after">
+                    <group col="12" groups="ikma_addons.group_ikma_azerbaijan_user">
+                        <group colspan="8">
+                            <label for="text_amount" string="Total in Words:" class="fw-bolder"/>
+                            <div>
+                                <field name="text_amount" nolabel="1"/>
+                            </div>
+                        </group>
+                    </group>
+                </xpath>
+                <group name="accounting_info_group" position="inside">
+                    <field name="service_invoice_month_count" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <field name="service_invoice_description" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                    <field name="service_invoice_note" groups="ikma_addons.group_ikma_azerbaijan_user"/>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>
