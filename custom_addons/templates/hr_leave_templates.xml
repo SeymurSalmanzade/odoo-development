@@ -1,0 +1,210 @@
+<odoo>
+    <data>
+        <template id="hr_leave_request_template" name="HR Leave Request">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="doc" t-value="doc.with_context(lang='az_AZ')"/>
+                    <t t-set="employee" t-value="doc.employee_id"/>
+                    <t t-call="web.basic_layout">
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;display=swap" rel="stylesheet"/>
+                            <style>
+                                body {
+                                    font-family: 'Times New Roman'
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="col-5 offset-7">
+                                <h5>
+                                    <b><span t-out="doc.company_id.name"/>-nin direktoru <span t-out="doc.company_id.director"/>-na</b>
+                                    <br/>
+                                    <span t-out="employee.job_id.name"/> vəzifəsində çalışan <span t-out="employee.name"/> tərəfindən
+                                </h5>
+                            </div>
+                            <br/>
+                            <br/>
+                            <h5 class="text-center">
+                                <b>ƏRİZƏ</b>
+                            </h5>
+                            <br/>
+                            <div>
+                                <h5>
+                                    <t t-if="is_self_employed or env.context.get('self_employed', False)">
+                                        Sizdən xahiş edirəm ki, mənə <span t-out="doc._get_format_date(doc.date_from)"/> tarixindən <span t-out="doc._get_format_date(doc.date_to)"/> tarixinədək <span t-out="doc.number_of_days" t-options="{'widget': 'integer'}"/> (<span t-out="doc._number_to_word_az(doc.number_of_days)"/>) gün müddətinə öz hesabıma (ödənişsiz) məzuniyyət verilməsinə sərəncam verəsiniz.
+                                    </t>
+                                    <t t-else="">
+                                        Sizdən xahiş edirəm ki, <span t-out="doc._get_format_date(doc.working_year_from, date_format='dd.MM.yyyy')"/> - <span t-out="doc._get_format_date(doc.working_year_to, date_format='dd.MM.yyyy')"/> iş ili üçün <span t-out="doc._get_format_date(doc.date_from)"/> tarixindən <span t-out="doc.number_of_days" t-options="{'widget': 'integer'}"/> (<span t-out="doc._number_to_word_az(doc.number_of_days)"/>) gün növbəti məzuniyyət verilməsinə sərəncam verəsiniz.
+                                    </t>
+                                </h5>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div name="order_date">
+                                <h5>
+                                    <span t-out="doc._get_format_date(doc.order_date)"/>
+                                </h5>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div name="signature">
+                                <h5 class="mb-0">
+                                    <b>İmza:</b>
+                                    <div style="display: inline-block; width: 40%; border-top: 1px solid black; margin: 0 5px;"></div>
+                                    <span>/</span>
+                                    <div style="display: inline-block; width: 45%; border-top: 1px solid black; margin: 0 5px; text-align: center;"></div>
+                                    <span>/</span>
+                                </h5>
+                                <small class="float-end" style="margin-right: 25%">(Ad, Soyad)</small>
+                            </div>
+                        </body>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="hr_leave_request_self_employed_template" name="HR Leave Request Self Employed">
+            <t t-call="web.html_container">
+                <t t-set="is_self_employed" t-value="True"/>
+                <t t-set="docs" t-value="docs.with_context(self_employed=True)"/>
+                <t t-call="custom_addons.hr_leave_request_template"/>
+            </t>
+        </template>
+
+        <template id="hr_leave_approval_template" name="HR Leave Approval">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="doc" t-value="doc.with_context(lang='az_AZ')"/>
+                    <t t-set="employee" t-value="doc.employee_id"/>
+                    <t t-call="web.basic_layout">
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;display=swap" rel="stylesheet"/>
+                            <style>
+                                body {
+                                    font-family: 'Times New Roman'
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div name="header" class="text-center fw-bolder">
+                                <h5>
+                                    <span t-out="doc.company_id.name"/>
+                                </h5>
+                                üzrə<br/><br/>
+                                ƏMR № <span t-out="doc.order_number"/>
+                            </div>
+                            <br/>
+                            <div name="date-location" class="fw-bolder">
+                                <p>
+                                    <span>Bakı şəhəri</span>
+                                    <span style="float: right;" t-out="doc._get_format_date(doc.order_date)"/>
+                                </p>
+                            </div>
+                            <br/>
+                            <div name="content">
+                                <p t-if="is_self_employed or env.context.get('self_employed', False)" class="fw-bolder">"Öz hesabına məzuniyyət haqqında"</p>
+                                <p t-else="" class="fw-bolder">"Əmək məzuniyyəti haqqında"</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="fw-bolder">
+                                            <span t-out="employee.name"/>
+                                        </p>
+                                    </div>
+                                    <div class="col-6 text-start">
+                                        <p>
+                                            cəmiyyətin <span t-out="employee.job_id.name"/>-i Azərbaycan Respublikasının Əmək Məcəlləsinin 128-ci maddəsinə əsasən <span t-out="doc._get_format_date(doc.date_from)"/> tarixindən <span t-out="doc._get_format_date(doc.date_to)"/> tarixinədək <span t-out="doc.number_of_days" t-options="{'widget': 'integer'}"/> (<span t-out="doc._number_to_word_az(doc.number_of_days)"/>) təqvim günü<t t-if="is_self_employed or env.context.get('self_employed', False)"> öz hesabına ödənişsiz</t> məzuniyyət verilsin.
+                                        </p>
+                                        <p>
+                                            İşçi <span t-out="doc._get_format_date(doc.working_start_date, date_format='dd.MM.yyyy')"/>-ci il tarixində işə başlamalıdır.
+                                        </p>
+                                    </div>
+                                </div>
+                                <br/>
+                                <p>
+                                    <span class="fw-bolder">Əsas:</span> İşçinin məzuniyyət ərizəsi
+                                </p>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div name="signature" class="fw-bolder">
+                                <p>
+                                    <span t-out="doc.company_id.name"/>-nin
+                                </p>
+                                <p>
+                                    Direktoru
+                                    <span class="float-end" t-out="doc.company_id.director"/>
+                                </p>
+                            </div>
+                        </body>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="hr_leave_approval_self_employed_template" name="HR Leave Approval Self Employed">
+            <t t-call="web.html_container">
+                <t t-set="is_self_employed" t-value="True"/>
+                <t t-set="docs" t-value="docs.with_context(self_employed=True)"/>
+                <t t-call="custom_addons.hr_leave_approval_template"/>
+            </t>
+        </template>
+
+        <template id="hr_leave_business_trip_template" name="HR Business Trip">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="doc" t-value="doc.with_context(lang='az_AZ')"/>
+                    <t t-set="employee" t-value="doc.employee_id"/>
+                    <t t-call="web.basic_layout">
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;display=swap" rel="stylesheet"/>
+                            <style>
+                                body {
+                                    font-family: 'Times New Roman'
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="col-5 offset-7 mb-5">
+                                <h5>
+                                    <b><span t-out="doc.company_id.name"/>-nin direktoru <span t-out="doc.company_id.director"/> tərəfindən</b>
+                                </h5>
+                            </div>
+                            <div class="mb-5">
+                                <h5>
+                                    <span t-out="doc._get_format_date(doc.order_date, date_format='dd.MM.yyyy')"/>
+                                </h5>
+                            </div>
+                            <h5 class="text-center mb-5">
+                                <b>TƏQDİMAT № <span t-out="doc.order_number"/></b>
+                            </h5>
+                            <div class="mb-5">
+                                <h5>
+                                    <p>
+                                        <span t-out="doc.name"/> ilə bağlı aşağıda adı qeyd edilmiş əməkdaş <span t-out="doc._get_format_date(doc.date_from, date_format='dd.MM.yyyy')"/> - <span t-out="doc._get_format_date(doc.date_to, date_format='dd.MM.yyyy')"/>-ci il tarixlərində <span t-out="doc.businness_trip_location"/> ezam olunur.<br/>
+                                    </p>
+                                    <p>
+                                        <b>1.</b> <span t-out="employee.name"/>
+                                    </p>
+                                </h5>
+                            </div>
+                            <div name="signature">
+                                <h5>
+                                    <p class="fw-bolder">
+                                        <span>Təqdimatı verən şəxsin adı</span>
+                                        <span class="float-end" t-out="doc.company_id.director"/>
+                                    </p>
+                                    <p class="fw-bolder">
+                                        <span>Təqdimatı verən şəxsin vəzifəsi</span>
+                                        <span class="float-end">Direktor</span>
+                                    </p>
+                                </h5>
+                            </div>
+                        </body>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

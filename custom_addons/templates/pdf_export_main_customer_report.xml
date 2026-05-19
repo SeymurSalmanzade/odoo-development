@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <template id="pdf_export_main_customer_report_inherit_custom" inherit_id="account_reports.pdf_export_main_customer_report">
+            <xpath expr="//body/div[1]" position="inside">
+                <div class="row avoid-page-break-inside" groups="custom_addons.group_custom_azerbaijan_user">
+                    <div class="col-6 text-center">
+                        <t t-set="company_names" t-value="[company['name'] for company in options['companies']]"/>
+                        <t t-if="company_names">
+                            <div t-out="', '.join(company_names)"/>
+                            <div class="mt-5">
+                                ____________________      __________      (__________)
+                            </div>
+                            <div class="mt-5">
+                                ____________________      __________      (__________)
+                            </div>
+                            <div class="text-start mt-3 ms-4">
+                                M.Y
+                            </div>
+                        </t>
+                    </div>
+                    <div class="col-6 text-center">
+                        <t t-set="partner_value" t-value="[partner for partner in options['selected_partner_ids']]"/>
+                        <t t-if="partner_value">
+                            <div t-out="', '.join(partner_value)"/>
+                            <div class="mt-5">
+                                ____________________      __________      (__________)
+                            </div>
+                            <div class="mt-5">
+                                ____________________      __________      (__________)
+                            </div>
+                            <div class="text-start mt-3 ms-4">
+                                M.Y
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

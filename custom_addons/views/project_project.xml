@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="project_add_purchase_smart_button" model="ir.ui.view">
+            <field name="name">project.add.purchase.smart.button</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project" />
+            <field name="arch" type="xml">
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" type="object" name="action_view_so_purchases"
+                        icon="fa-shopping-basket" groups="custom_addons.group_custom_azerbaijan_user">
+                        <field name="sale_purchase_count" widget="statinfo" string="Purchases" />
+                    </button>
+                </div>
+            </field>
+        </record>
+
+        <record id="project_enable_worksheet_task_automation" model="ir.ui.view">
+            <field name="name">project.enable.worksheet.task.automation</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id"
+                ref="industry_fsm_report.project_project_form_inherit_industry_fsm_report" />
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Worksheet Orders and Schedules" name="worksheet_orders_schedules" groups="custom_addons.group_custom_georgia_user">
+                        <group>
+                            <field name="allow_worksheet_task_automation" />
+                            <field name="project_worksheet_lines" invisible="not allow_worksheet_task_automation">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle" />
+                                    <field name="worksheet_id" />
+                                    <field name="planned_next" />
+                                    <field name="planned_at" />
+                                </list>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

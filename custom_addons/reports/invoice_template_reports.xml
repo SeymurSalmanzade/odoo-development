@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record id="action_report_invoice_with_stamp" model="ir.actions.report">
+            <field name="name">Invoice with Stamp</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_addons.report_invoice_with_stamp</field>
+            <field name="report_file">custom_addons.report_invoice_with_stamp</field>
+            <field name="print_report_name">'Invoice with Stamp - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+        </record>
+
+        <record id="service_invoice_report" model="ir.actions.report">
+            <field name="name">Service Invoice</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_addons.service_invoice</field>
+            <field name="report_file">custom_addons.service_invoice</field>
+            <field name="print_report_name">'Service Invoice - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+        </record>
+        
+        <record id="service_invoice_with_stamp_report" model="ir.actions.report">
+            <field name="name">Service Invoice with Stamp</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">custom_addons.service_invoice_with_stamp</field>
+            <field name="report_file">custom_addons.service_invoice_with_stamp</field>
+            <field name="print_report_name">'Service Invoice with Stamp - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_account_move"/>
+            <field name="binding_type">report</field>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+        </record>
+    </data>
+</odoo>

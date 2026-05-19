@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_crm_lead2opportunity_partner_inherit_custom_addons" model="ir.ui.view">
+            <field name="name">crm.lead2opportunity.partner.view.inherit.custom_addons</field>
+            <field name="model">crm.lead2opportunity.partner</field>
+            <field name="inherit_id" ref="crm.view_crm_lead2opportunity_partner"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='name']/field[@name='name']" position="after">
+                    <field name="opportunity_type_id" required="1" options="{'no_quick_create': True}" groups="custom_addons.group_custom_azerbaijan_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

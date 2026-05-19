@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+        <record id="button_tta_report" model="ir.actions.server">
+            <field name="name">TTA</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">list,form</field>
+            <field name="binding_type">report</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_window',
+                    'name': 'TTA Report',
+                    'res_model': 'tta.report.wizard',
+                    'view_mode': 'form',
+                    'target': 'new',
+                    'context': {
+                        'default_order_ids': env.context.get('active_ids'),
+                    },
+                }
+            </field>
+        </record>
+
+        <record id="button_tta_report_from_annex" model="ir.actions.server">
+            <field name="name">TTA</field>
+            <field name="model_id" ref="custom_addons.model_sale_annex"/>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+            <field name="binding_model_id" ref="custom_addons.model_sale_annex"/>
+            <field name="binding_view_types">list,form</field>
+            <field name="binding_type">report</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_window',
+                    'name': 'TTA Report',
+                    'res_model': 'tta.report.wizard',
+                    'view_mode': 'form',
+                    'target': 'new',
+                    'context': {
+                        'default_order_ids': env['sale.annex'].browse(env.context.get('active_ids')).mapped('order_id').ids,
+                        'tta_print_from_annex': True,
+                        'annex_ids': env.context.get('active_ids'),
+                    },
+                }
+            </field>
+        </record>
+
+        <record id="button_annex_report" model="ir.actions.server">
+            <field name="name">Annex</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">form</field>
+            <field name="binding_type">report</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                    'type': 'ir.actions.act_window',
+                    'name': 'Annex Report',
+                    'res_model': 'annex.report.wizard',
+                    'view_mode': 'form',
+                    'target': 'new',
+                    'context': {
+                        'default_order_id': env.context.get('active_id'),
+                    },
+                }
+            </field>
+        </record>
+
+        <record id="button_generate_and_attach_contract" model="ir.actions.server">
+            <field name="name">Generate and Attach Contract</field>
+            <field name="groups_id" eval="[(4, ref('custom_addons.group_custom_azerbaijan_user'))]"/>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">form</field>
+            <field name="binding_type">action</field>
+            <field name="state">code</field>
+            <field name="code">
+                    action = records.generate_and_attach_contract()
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,239 @@
+<odoo>
+    <data>
+        <template id="tta_raw">
+            <t t-call="web.html_container">
+                <t t-set="without_handover_part" t-value="env.context.get('without_handover_part')"/>
+                <t t-set="with_handover" t-value="env.context.get('with_handover')"/>
+                <t t-set="with_transferee" t-value="env.context.get('with_transferee')"/>
+                <t t-set="with_confirming" t-value="env.context.get('with_confirming')"/>
+                <t t-set="with_partner_confirming" t-value="env.context.get('with_partner_confirming')"/>
+                <t t-set="with_stamp" t-value="env.context.get('with_stamp')"/>
+                <t t-foreach="docs" t-as="doc">
+                    <t t-if="env.context.get('annex_ids', False)" t-set="annex_ids" t-value="env['sale.annex'].browse(env.context.get('annex_ids')).filtered(lambda a: a.order_id.id == doc.id)"/>
+                    <t t-else="" t-set="annex_ids" t-value="doc._get_annexes_in_order_line()"/>
+                    <t t-foreach="annex_ids" t-as="annex">
+                        <t t-call="custom_addons.tta_template" t-lang="doc.last_updated_tta_lang "/>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="tta_template" inherit_id="sale.report_saleorder_document" primary="True">
+            <xpath expr="//t[@t-call='web.external_layout']" position="attributes">
+                <attribute name="t-call">custom_addons.tta_layout_boxed</attribute>
+            </xpath>
+            <xpath expr="//t[@t-set='doc']" position="attributes">
+                <attribute name="t-value">doc.with_context(lang=doc.last_updated_tta_lang)</attribute>
+            </xpath>
+            <xpath expr="//div[@class='page']" position="before">
+                <head>
+                    <meta charset="UTF-8"/>
+                    <style>
+                        .o_report_layout_boxed {
+                            font-size: 14px !important;
+                        }
+                        .o_report_layout_boxed h2 {
+                            font-size: 22px !important;
+                        }
+                    </style>
+                </head>
+            </xpath>
+
+            <xpath expr="//t[@t-set='information_block']" position="replace"/>
+            
+            <xpath expr="//t[@t-set='layout_document_title']" position="before">
+                <div class="row">
+                    <div class="col-4 offset-8">
+                        <p class="text-end">
+                            Baku city, "____" <span t-out="doc._get_format_date(doc.last_updated_tta_date, date_format='MMMM yyyy')"/><br/>
+                            <small>(the date is written manually by the Client)</small>
+                        </p>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//t[@t-set='layout_document_title']" position="replace">
+                <h2>
+                    <span>
+                        TTA # <span t-field="doc.name">SO0000</span>-<span t-out="doc.last_updated_tta_date.strftime('%m-%Y')">00/0000</span>
+                    </span>
+                </h2>
+            </xpath>
+
+            <xpath expr="//div[@id='informations']" position="replace"/>
+            <xpath expr="//t[@t-set='lines_to_report']" position="attributes">
+                <attribute name="t-value">doc._get_annex_order_lines(annex)</attribute>
+            </xpath>
+            <xpath expr="//t[@t-set='lines_to_report']" position="before">
+                <div name="content">
+                    <t t-set="contract_partner_company_short" t-value="doc.contract_partner_company_short if not doc.is_existing_contract else doc.existing_contract_sale_order_id.contract_partner_company_short"/>
+                    <t t-set="contract_number" t-value="doc.contract_number if not doc.is_existing_contract else doc.existing_contract_sale_order_id.contract_number"/>
+                    <p>
+                        <t t-if="doc.last_updated_tta_lang == 'az_AZ'">
+                            Biz, aşağıda imza edənlər, bir tərəfdən <span t-out="doc.company_id.company_name_short"/>-nin səlahiyyətli nümayəndəsi və digər tərəfdən <span t-out="contract_partner_company_short"/>-nin səlahiyyətli nümayəndəsi, qeyd olunmuş tərəflər arasında imzalanmış <span t-out="contract_number"/> nömrəli müqaviləyə 
+                            <t t-if="doc.is_existing_contract">əlavə olaraq imzalanmış <span t-field="doc.name"/> nömrəli satınalma razılaşdırılmasına </t>
+                            əsasən təsdiq edirik ki, aşağıda qeyd olunan 
+                            <t t-if="doc.contract_type == 'spo'">malları, işləri və xidmətləri</t>
+                            <t t-elif="doc.contract_type == 'service'">xidmətləri</t>
+                            <t t-elif="doc.contract_type == 'supply'">malları</t>
+                            <t t-elif="doc.contract_type == 'installation'">işləri</t> 
+                            təhvil-təslim etdik.
+                        </t>
+                        <t t-else="">
+                            We, the undersigned, on one hand, the authorized representative of <span t-out="doc.company_id.company_name_short"/>, and on the other hand, the authorized representative of <span t-out="contract_partner_company_short"/>, hereby confirm, 
+                            <t t-if="doc.is_existing_contract">based on the <span t-field="doc.name"/> numbered procurement agreement signed as an addendum to the </t>
+                            <span t-out="contract_number"/> numbered contract between the aforementioned parties, that the 
+                            <t t-if="doc.contract_type == 'spo'">goods, works, and services</t>
+                            <t t-elif="doc.contract_type == 'service'">services</t>
+                            <t t-elif="doc.contract_type == 'supply'">goods</t>
+                            <t t-elif="doc.contract_type == 'installation'">works</t>
+                            listed below have been delivered and accepted.
+                        </t>
+                    </p>
+                </div>
+            </xpath>
+
+            <xpath expr="//t[@t-set='lines_to_report']" position="after">
+                <div t-if="not doc.is_existing_contract and doc.contract_type == 'service'" class="p-1" t-att-style="'background-color: %s; color: white;' % doc.company_id.primary_color or 'DodgerBlue'">
+                    <t t-if="annex.assignment">
+                        <span t-out="annex.assignment"/> - 
+                    </t>
+                    <span t-out="annex.name"/>: (<t t-out="', '.join([line.product_id.name for line in lines_to_report])"/>)
+                </div>
+            </xpath>
+
+            <xpath expr="//table[hasclass('o_main_table')]" position="attributes">
+                <attribute name="t-if">doc.is_existing_contract or doc.contract_type != 'service'</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='so_total_summary']" position="attributes">
+                <attribute name="t-if">doc.is_existing_contract or doc.contract_type != 'service'</attribute>
+            </xpath>
+
+            <xpath expr="//t[@t-set='tax_totals']" position="attributes">
+                <attribute name="t-value">doc.annex_tax_totals[annex.id]</attribute>
+            </xpath>
+
+            <xpath expr="//span[@name='order_note']" position="replace">
+                <span t-out="annex._get_package_note_for_tta_date(doc.last_updated_tta_date, doc.last_updated_tta_lang)" t-attf-style="#{'text-align:justify;text-justify:inter-word;' if doc.company_id.terms_type != 'html' else ''}" name="tta_note"/>
+            </xpath>
+
+            <xpath expr="//div[@name='signature']" position="replace"/>
+            <xpath expr="//p[@id='fiscal_position_remark']" position="replace"/>
+
+            <xpath expr="//div[hasclass('page')]" position="inside">
+                <div class="avoid-page-break-inside">
+                    <div class="text-center p-1 fw-bolder" t-att-style="'background-color: %s; color: white;' % doc.company_id.primary_color">
+                        CONFIRMATION OF DELIVERY
+                    </div>
+                    <br/>
+                    <div class="row" t-if="not without_handover_part">
+                        <div class="col-6">
+                            <p class="text-center fw-bold">
+                                HANDOVER:
+                            </p>
+                            <p class="text-start">
+                                <b>Name, Surname:</b> <span t-if="with_handover and annex.tta_handover_id" t-out="annex.tta_handover_id.name"/>
+                                <br/>
+                                <b>Position:</b> <span t-if="with_handover and annex.tta_handover_function" t-out="annex.tta_handover_function"/>
+                            </p>
+                            <p class="text-center">
+                                _______________________________
+                                <br/>
+                                (sign)
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center fw-bold">
+                                TRANSFEREE:
+                            </p>
+                            <p class="text-start">
+                                <b>Name, Surname:</b> <span t-if="with_transferee and annex.tta_transferee_id" t-out="annex.tta_transferee_id.name"/>
+                                <br/>
+                                <b>Position:</b> <span t-if="with_transferee and annex.tta_transferee_function" t-out="annex.tta_transferee_function"/>
+                            </p>
+                            <p class="text-center">
+                                _______________________________
+                                <br/>
+                                (sign)
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="solid text-black" t-if="not without_handover_part"/>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-center fw-bold">
+                                CONFIRM:<br/>
+                                <span t-out="doc.company_id.company_name_short"/>
+                            </p>
+                            <p class="text-start">
+                                <b>Name, Surname:</b> 
+                                <t t-if="with_confirming">
+                                    <t t-if="doc.is_existing_contract and doc.existing_contract_sale_order_id.tta_confirming_user_id">
+                                        <span t-out="doc.existing_contract_sale_order_id.tta_confirming_user_id.name"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-if="doc.tta_confirming_user_id" t-out="doc.tta_confirming_user_id.name"/>
+                                    </t>
+                                </t>
+                                <br/>
+                                <b>Position:</b> 
+                                <t t-if="with_confirming">
+                                    <t t-if="doc.is_existing_contract and doc.existing_contract_sale_order_id.tta_confirming_user_function">
+                                        <span t-out="doc.existing_contract_sale_order_id.tta_confirming_user_function"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-if="doc.tta_confirming_user_function" t-out="doc.tta_confirming_user_function"/>
+                                    </t>
+                                </t>
+                            </p>
+                            <p class="text-center" style="position: relative;">
+                                _______________________________
+                                <br/>
+                                (sign, stamp)
+                                
+                                <t t-if="with_stamp and doc.company_id.stamp">
+                                    <img t-att-src="image_data_uri(doc.company_id.stamp)"
+                                        alt="Stamp"
+                                        style="position: absolute; top: -95px; left: 30%; transform: translateX(-70%); width:8.50cm; height: 5.2cm; z-index: 0;"/>
+                                </t>
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center fw-bold">
+                                CONFIRM:<br/>
+                                <span t-out="contract_partner_company_short"/>
+                            </p>
+                            <p class="text-start">
+                                <b>Name, Surname:</b> 
+                                <t t-if="with_partner_confirming">
+                                    <t t-if="doc.is_existing_contract and doc.existing_contract_sale_order_id.tta_confirming_partner_id">
+                                        <span t-out="doc.existing_contract_sale_order_id.tta_confirming_partner_id.name"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-if="doc.tta_confirming_partner_id" t-out="doc.tta_confirming_partner_id.name"/>
+                                    </t>
+                                </t>
+                                <br/>
+                                <b>Position:</b> 
+                                <t t-if="with_partner_confirming">
+                                    <t t-if="doc.is_existing_contract and doc.existing_contract_sale_order_id.tta_confirming_partner_function">
+                                        <span t-out="doc.existing_contract_sale_order_id.tta_confirming_partner_function"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-if="doc.tta_confirming_partner_function" t-out="doc.tta_confirming_partner_function"/>
+                                    </t>
+                                </t>
+                            </p>
+                            <p class="text-center">
+                                _______________________________
+                                <br/>
+                                (sign, stamp)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

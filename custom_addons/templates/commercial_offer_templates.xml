@@ -1,0 +1,137 @@
+<odoo>
+    <data>
+        <template id="commercial_offer_raw">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="lang" t-value="doc.partner_id.lang"/>
+                    <t t-call="custom_addons.commercial_offer_template" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+        <template id="commercial_offer_with_stamp">
+            <t t-call="custom_addons.commercial_offer_raw">
+                <t t-set="is_sign_and_stamp" t-value="True"/>
+            </t>
+        </template>
+
+        <template id="commercial_offer_template" inherit_id="sale.report_saleorder_document" primary="True">
+            <xpath expr="/t/t" position="attributes">
+                <attribute name="t-call">custom_addons.commercial_offer_layout_boxed</attribute>
+            </xpath>
+
+            <xpath expr="//t[@t-set='layout_document_title']/span[@t-else='']" position="replace">
+                <span t-else="">Commercial Agreement # </span>
+            </xpath>
+
+            <xpath expr="//div[@name='informations_reference']" position="attributes">
+                <attribute name="class" add="col-5" separator=" "/>
+            </xpath>
+
+            <xpath expr="//div[@name='informations_date']/strong[2]" position="replace">
+                <strong>Date:</strong>
+            </xpath>
+
+            <xpath expr="//div[@name='informations_date']/strong[3]" position="replace"/>
+
+            <xpath expr="//div[@name='informations_date']/div[@t-field='doc.date_order']" position="attributes">
+                <attribute name="t-field">doc.spo_date</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='expiration_date']" position="replace"/>
+            <xpath expr="//div[@t-if='doc.user_id.name']" position="replace"/>
+            <xpath expr="//div[@name='plan']" position="replace"/>
+
+            <xpath expr="//div[@name='payment_terms']" position="attributes">
+                <attribute name="t-if">doc.payment_term_id and doc.state not in 'sale'</attribute>
+            </xpath>
+            
+            <xpath expr="//div[@id='informations']" position="inside">
+                <t t-set="project_number" t-value="doc.order_line.filtered(lambda line: line.annex_id)[:1].annex_id.name"/>
+                <div t-if="project_number" class="col" name="project_number">
+                    <strong>Project Number:</strong><br/>
+                    <span t-out="project_number"/>
+                </div>
+
+                <t t-set="assignment" t-value="doc.order_line.filtered(lambda line: line.annex_assignment)[:1].annex_assignment"/>
+                <div t-if="assignment" class="col" name="assignment">
+                    <strong>Project Name:</strong><br/>
+                    <span t-out="assignment"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//th[@name='th_quantity']" position="after">
+                <th name="th_delivery_time">
+                    <span>Delivery Time</span>
+                </th>
+            </xpath>
+
+            <xpath expr="//td[@name='td_quantity']" position="after">
+                <td name="td_delivery_time">
+                    <span t-field="line.delivery_time"/>
+                </td>
+            </xpath>
+
+            <xpath expr="//span[@name='order_note']" position="attributes">
+                <attribute name="t-field">doc.spo_note</attribute>
+            </xpath>
+            
+            <xpath expr="//div[hasclass('page')]" position="after">
+                <div t-if="doc.state == 'sale'" style="page-break-inside: avoid;">
+                    <div class="text-center p-1 fw-bolder" t-att-style="'background-color: %s; color: white;' % doc.company_id.primary_color">
+                        <span style="font-size: large;">OFFER APPROVAL</span>
+                    </div>
+                    <div class="oe_structure"/>
+                    <br/>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-center">
+                                Executor:<br/>
+                                <span class="fw-bolder" t-out="doc.company_id.company_name_short"/>
+                            </p>
+                            <br/>
+                            <br/>
+                            <div>
+                                <p class="text-center" style="position: relative;">
+                                    _______________________________
+                                    <br/>
+                                    (sign, stamp)
+
+                                    <t t-if="(env.context.get('is_sign_and_stamp', False) or is_sign_and_stamp) and doc.company_id.stamp">
+                                        <img t-att-src="image_data_uri(doc.company_id.stamp)"
+                                            alt="Stamp"
+                                            style="position: absolute; top: -75px; left: 20%; transform: translateX(-70%); width:8.50cm; height: 5.2cm; z-index: 0;"/>
+                                    </t>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center">
+                                Client:<br/>
+                                <span class="fw-bolder">
+                                    <t t-if="doc.is_existing_contract">
+                                        <t t-if="doc.existing_contract_sale_order_id.contract_partner_company_short" t-out="doc.existing_contract_sale_order_id.contract_partner_company_short"/>
+                                    </t>
+                                    <t t-else="">
+                                        <t t-if="doc.contract_partner_company_short" t-out="doc.contract_partner_company_short"/>
+                                        <t t-elif="doc.partner_id.is_company" t-out="doc.partner_id.name"/>
+                                        <t t-else="" t-out="doc.partner_id.parent_id.name"/>
+                                    </t>
+                                </span>
+                            </p>
+                            <br/>
+                            <br/>
+                            <div>
+                                <p class="text-center">
+                                    _______________________________
+                                    <br/>
+                                    (sign, stamp)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template> 
+    </data>
+</odoo>

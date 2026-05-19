@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="sale_subscription_view_tree_inherit_custom_addons" model="ir.ui.view">
+            <field name="name">sale.subscription.tree.inherit.custom.addons</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="project_number" groups="custom_addons.group_custom_azerbaijan_user"/>
+                </field>
+                <field name="recurring_total" position="before">
+                    <field name="recurring_per_line" optional="show"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

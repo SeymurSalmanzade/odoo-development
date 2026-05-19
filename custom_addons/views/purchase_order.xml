@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="purchase_order_view_form_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.view.form.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Logistics" groups="custom_addons.group_custom_azerbaijan_user">
+                        <group>
+                            <group>
+                                <field name="origin"/>
+                                <field name="exw"/>
+                                <field name="stuffling"/>
+                                <field name="etd"/>
+                                <field name="deliver_baku"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Actual Container qty">
+                                <field name="ft20"/>
+                                <field name="ft40"/>
+                            </group>
+                            <group string="DATE (Eta Poti) / VAT (ƏDV) 2024">
+                                <field name="eta_poti_date"/>
+                                <field name="vat_edv"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+        <record id="app_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.sale.custom_addons</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//block[@name="quotation_order_setting_container"]' position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box" id="sale_config_line_sequence_product">
+                        <div class="o_setting_left_pane">
+                            <field name="sale_line_sequence_product_only"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sale_line_sequence_product_only"/>
+                            <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." groups="base.group_multi_company"/>
+                            <div class="text-muted">
+                                Check this to set Order line number only for product in Sale Order. Not for Section or Note.
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//app[@name='sale_management']" position="inside">
+                    <block title="Sale Contracts" name="sale_contract_setting_container" groups="custom_addons.group_custom_azerbaijan_user">
+                        <setting string="SPO" help="Modify Commercial Offer values here">
+                            <div class="content-group">
+                                <label for="spo_note"/>
+                                <div>
+                                    <span class="text-muted">Note will be printed on bottom of the Commercial Offer.</span>
+                                    <field name="spo_note" placeholder="Insert your SPO (Commercial Offer) note here..." class="w-100"/>
+                                </div>
+                            </div>
+                        </setting>
+                        <setting string="Annex" help="Modify Annex values here">
+                            <div class="content-group">
+                                <label for="annex_note_header"/>
+                                <div>
+                                    <span class="text-muted">Header Note will be printed on top of the Annex.</span>
+                                    <field name="annex_note_header" placeholder="Insert your Annex Header note here..." class="w-100"/>
+                                </div>
+                                <br/>
+                                <label for="annex_note_footer"/>
+                                <div>
+                                    <span class="text-muted">Footer Note will be printed at the bottom of the Annex.</span>
+                                    <field name="annex_note_footer" placeholder="Insert your Annex Footer note here..." class="w-100"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+       </record>
+
+       <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.account.custom_addons</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='account']" position="inside">
+                    <block title="Service Invoice" name="service_invoice_setting_container" groups="custom_addons.group_custom_azerbaijan_user">
+                        <setting string="Service Invoice Note" help="Note will be printed on bottom of the Service Invoice.">
+                            <div class="content-group">
+                                <field name="service_invoice_note" placeholder="Insert your Service Invoice note here..." class="w-100"/>
+                            </div>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

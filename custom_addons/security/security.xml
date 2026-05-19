@@ -1,0 +1,39 @@
+<odoo>
+    <data>        
+        <!-- CUSTOM Groups -->
+        <record id="group_custom_azerbaijan_user" model="res.groups">
+            <field name="name">CUSTOM Azerbaijan</field>
+            <field name="comment">Users with access to CUSTOM Azerbaijan functionality</field>
+        </record>
+
+        <record id="group_custom_georgia_user" model="res.groups">
+            <field name="name">CUSTOM Georgia</field>
+            <field name="comment">Users with access to CUSTOM Georgia functionality</field>
+        </record>
+
+        <!-- Multi - Company Rules -->
+        <record id="sale_contract_template_comp_rule" model="ir.rule">
+            <field name="name">Sale Contract Template multi-company</field>
+            <field name="model_id" ref="custom_addons.model_sale_contract_template"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="sale_addendum_template_comp_rule" model="ir.rule">
+            <field name="name">Sale Addendum Template multi-company</field>
+            <field name="model_id" ref="custom_addons.model_sale_addendum_template"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="sale_annex_comp_rule" model="ir.rule">
+            <field name="name">Sale Annex multi-company</field>
+            <field name="model_id" ref="custom_addons.model_sale_annex"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="tta_packages_comp_rule" model="ir.rule">
+            <field name="name">TTA Packages multi-company</field>
+            <field name="model_id" ref="custom_addons.model_tta_packages"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

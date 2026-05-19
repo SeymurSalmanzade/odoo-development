@@ -1,0 +1,226 @@
+<odoo>
+  <data>
+    <record id="sale_view_sales_order_filter_inherit" model="ir.ui.view">
+      <field name="name">sale.view.sales.order.filter.inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+      <field name="arch" type="xml">
+        <field name="name" position="attributes">
+          <attribute name="filter_domain">['|', '|', '|', ('name', 'ilike', self), ('client_order_ref', 'ilike', self), ('partner_id', 'child_of', self), ('project_number', 'ilike', self)]</attribute>
+        </field>
+        <field name="name" position="after">
+          <field name="project_number" string="Project Number" filter_domain="[('project_number', 'ilike', self)]" groups="custom_addons.group_custom_azerbaijan_user"/>
+          <field name="annex_ids" groups="custom_addons.group_custom_azerbaijan_user"/>
+          <field name="tag_ids"/>
+        </field>
+        <group position="before">
+          <filter name="has_tta_attachments" string="Has TTA" domain="[('has_tta_attachments','=',True)]" groups="custom_addons.group_custom_azerbaijan_user"/>
+        </group>
+      </field>
+    </record>
+
+    <record id="sale_order_tree_inherit" model="ir.ui.view">
+      <field name="name">sale.order.tree.inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.sale_order_tree" />
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="project_number" optional="show" groups="custom_addons.group_custom_azerbaijan_user"/>
+        </field>
+        <field name="amount_total" position="before">
+          <field name="amount_per_line" optional="show" groups="custom_addons.group_custom_azerbaijan_user"/>
+        </field>
+        <field name="state" position="after">
+          <field name="has_tta_attachments" optional="show" widget="boolean_toggle" groups="custom_addons.group_custom_azerbaijan_user"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="sale_order_view_order_form_inherit" model="ir.ui.view">
+      <field name="name">sale.order.form.inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//header" position="inside">
+          <field name="signed_contract" invisible="1"/>
+          <field name="is_individual_partner" invisible="1"/>
+          <field name="contract_type" invisible="1"/>
+          <field name="is_existing_contract" invisible="1"/>
+          <field name="is_custom_contract_user" invisible="1"/>
+        </xpath>
+
+        <xpath expr="//header/button[@name='action_confirm'][1]" position="attributes">
+            <attribute name="invisible">state != 'sent' or not signed_contract and contract_type != 'none' and not is_existing_contract and is_custom_contract_user</attribute>
+        </xpath>
+
+        <xpath expr="//header/button[@name='action_confirm'][2]" position="attributes">
+            <attribute name="invisible">state != 'draft' or not signed_contract and contract_type != 'none' and not is_existing_contract and is_custom_contract_user</attribute>
+        </xpath>
+
+        <xpath expr="//form/header" position="inside">
+          <field name="is_approved_quotation" invisible="1"/>
+          <button name="approve_quotation" groups="custom_addons.group_custom_azerbaijan_user" class="btn btn-secondary text-success" type="object" icon="fa-check" string="Approve" invisible="is_approved_quotation or state not in ['draft', 'sent']" confirm="Are you sure you want to Approve the Quotation?"/>
+        </xpath>
+
+        <xpath expr="//div[@name='button_box']" position="inside">
+          <button name="action_view_related_spo_orders" type="object" class="oe_stat_button" icon="fa-file-text-o" groups="custom_addons.group_custom_azerbaijan_user">
+            <field name="spo_count" string="SPOs" widget="statinfo"/>
+          </button>
+        </xpath>
+
+        <xpath expr="//div[@name='button_box']" position="after">
+          <div name="approved_quotation" groups="custom_addons.group_custom_azerbaijan_user" class="float-end fs-6 badge rounded-pill fw-bold text-bg-success mx-1" invisible="not is_approved_quotation">Approved</div>
+        </xpath>
+
+        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+          <page string="Contract Details" groups="custom_addons.group_custom_azerbaijan_user">
+            <header>
+              <div class="text-nowrap" invisible="contract_type in ('none','spo',False) or is_existing_contract">
+                <button name="sign_contract" type="object" class="btn-primary" invisible="signed_contract" confirm="Do you want to sign the Contract?">
+                  Sign Contract <i class="fa fa-sign-in" aria-hidden="True"/>
+                </button>
+                <button name="cancel_contract" type="object" class="btn-secondary" invisible="not signed_contract" confirm="Are you sure you want to cancel the Contract?">
+                  Cancel Contract <i class="fa fa-sign-out" aria-hidden="True"/>
+                </button>
+              </div>
+            </header>
+            <group>
+              <group>
+                <field name="is_existing_contract" widget="boolean_toggle" options="{'autosave': False}" readonly="signed_contract"/>
+                <field name="existing_contract_sale_order_id" required="is_existing_contract" invisible="not is_existing_contract" options="{'no_create': True, 'no_create_edit': True}" domain="[('is_existing_contract', '=', False), ('state', '=', 'sale'), ('id', '!=', id), ('partner_id', '=', partner_id), ('subscription_state', '!=', '6_churn')]"/>
+                <field name="contract_type" required="True" readonly="is_existing_contract" force_save="1"/>
+                <field name="contract_template_id" invisible="contract_type in ('none','spo',False) or is_existing_contract" domain="[('type', '=', contract_type)]" context="{'default_type': contract_type, 'default_company_id': company_id}"/>
+              </group>
+            </group>
+            <group invisible="contract_type in ('none','spo',False) or is_existing_contract">
+              <group string="Main Details">
+                <field name="service_addendum" invisible="contract_type != 'service'"/>
+                <field name="installation_addendum" invisible="contract_type != 'installation'"/>
+                <field name="addendum_template_id" invisible="contract_type not in ('service', 'installation')" domain="['&amp;',('contract_type', '=', contract_type), '|', ('type', '=', service_addendum), ('type', '=', installation_addendum)]" context="{'default_contract_type': contract_type, 'default_company_id': company_id}"/>
+                <field name="contract_number"/>
+                <field name="project_number"/>
+                <field name="project_name" invisible="1"/>
+                <field name="contract_date"/>
+                <field name="contract_partner_company"/>
+                <field name="contract_partner_company_short"/>
+                <field name="contract_partner_person" domain="[('is_company', '=', False), '|', ('parent_id', '=', contract_partner_company), ('id', '=', contract_partner_company)]"/>
+                <field name="contract_partner_person_position"/>
+                <field name="contract_executor_person" domain="[('is_company', '=', False), ('parent_id', '=', company_partner_id)]"/>
+                <field name="contract_executor_person_position"/>
+                <field name="contract_current_address"/>
+              </group>
+              <group string="TTA Details">
+                  <field name="last_updated_tta_date" invisible="1"/>
+                  <field name="last_updated_tta_lang" invisible="1"/>
+                  <field name="contract_start_date" readonly="signed_contract"/>
+                  <field name="contract_end_date" readonly="signed_contract"/>
+                  <field name="tta_confirming_user_id" widget="many2one_avatar_user"/>
+                  <field name="tta_confirming_user_function"/>
+                  <field name="tta_confirming_partner_id" widget="many2one_avatar_user"/>
+                  <field name="tta_confirming_partner_function"/>
+              </group>
+              <group string="Executor Requisites">
+                <field name="company_partner_id" invisible="1"/>
+                <field name="contract_executor_address"/>
+                <field name="contract_executor_tin"/>
+                <field name="company_recipient_bank_id" domain="[('partner_id', '=', company_partner_id)]"/>
+                <field name="contract_executor_bank_name"/>
+                <field name="contract_executor_bank_code"/>
+                <field name="contract_executor_bank_tin"/>
+                <field name="contract_executor_bank_swift"/>
+                <field name="contract_executor_bank_acc_number"/>
+                <field name="contract_executor_correspondent_acc_number"/>
+              </group>
+              <group string="Customer Requisites">
+                <field name="contract_partner_address"/>
+                <field name="contract_partner_tin"/>
+                <field name="partner_recipient_bank_id" domain="[('partner_id', '=', contract_partner_company)]" invisible="is_individual_partner"/>
+                <field name="contract_partner_bank_name" invisible="is_individual_partner"/>
+                <field name="contract_partner_bank_code" invisible="is_individual_partner"/>
+                <field name="contract_partner_bank_tin" invisible="is_individual_partner"/>
+                <field name="contract_partner_bank_swift" invisible="is_individual_partner"/>
+                <field name="contract_partner_bank_acc_number" invisible="is_individual_partner"/>
+                <field name="contract_partner_correspondent_acc_number" invisible="is_individual_partner"/>
+                <field name="contract_partner_birthday" invisible="not is_individual_partner"/>
+                <field name="contract_partner_passport_serial_number" invisible="not is_individual_partner"/>
+                <field name="contract_partner_passport_fin" invisible="not is_individual_partner"/>
+              </group>
+            </group>
+          </page>
+          <page name="contract_attachments" string="Contract Attachments" groups="custom_addons.group_custom_azerbaijan_user">
+            <p class="text-warning">
+              The size of an attached file must not exceed <b>134 MB</b>.
+            </p>
+            <p class="text-info">
+              For optimal performance, the total size of attached files should not exceed <b>100 MB</b>.
+            </p>
+            <group>
+              <group string="Header Attachments">
+                <field name="header_contract_attachment_ids" nolabel="1" colspan="2">
+                  <list no_open="true" default_order="sequence asc">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="datas"/>
+                  </list>
+                </field>
+              </group>
+              <group string="Footer Attachments">
+                <field name="footer_contract_attachment_ids" nolabel="1" colspan="2">
+                  <list no_open="true" default_order="sequence asc">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="datas"/>
+                  </list>
+                </field>
+              </group>
+            </group>
+          </page>
+          <page string="TTA Attachments" name="tta_attachments" groups="custom_addons.group_custom_azerbaijan_user">
+            <group>
+              <field name="tta_attachment_ids" widget="many2many_binary" nolabel="1"/>
+            </group>
+          </page>
+          <page string="Commercial Offer" groups="custom_addons.group_custom_azerbaijan_user">
+            <group colspan="2">
+              <field name="spo_date"/>
+            </group>
+            <group>
+              <field name="spo_note" nolabel="1" colspan="2" placeholder="Additional Note for Commercial Offer..."/>
+            </group>
+          </page>
+        </xpath>
+
+        <field name="opportunity_id" position="after">
+          <field name="opportunity_no"/>
+        </field>
+
+        <field name="client_order_ref" position="attributes">
+          <attribute name="groups">custom_addons.group_custom_azerbaijan_user</attribute>
+        </field>
+
+        <group name="partner_details" position="inside">
+          <field name="client_order_ref" required="1" groups="custom_addons.group_custom_georgia_user"/>
+        </group>
+
+        <xpath expr="//field[@name='order_line']/list/field[@name='product_id']" position="before">
+            <field name="sequence2" string="#" force_save="1"/>
+        </xpath>
+
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/list[1]/field[@name='product_uom_qty']" position="after">
+          <field name="order_id" column_invisible="1"/>
+          <field name="order_date" column_invisible="1"/>
+          <field name="annex_id" groups="custom_addons.group_custom_azerbaijan_user" context="{'default_order_id': order_id, 'default_date': order_date, 'default_company_id': company_id}" domain="[('order_id', '!=', False), ('order_id', '=', order_id)]" readonly="not order_id"/>
+          <field name="annex_assignment" readonly="not annex_id" groups="custom_addons.group_custom_azerbaijan_user"/>
+          <field name="delivery_time" groups="custom_addons.group_custom_azerbaijan_user"/>
+          <field name="lift_number" optional="hide"/>
+          <field name="lift_type" optional="hide"/>
+          <field name="lift_supply_line" optional="hide" groups="custom_addons.group_custom_georgia_user"/>
+          <field name="lift_speed" optional="hide"/>
+          <field name="lift_load_capacity" optional="hide"/>
+          <field name="lift_floor_number" optional="hide"/>
+          <field name="lift_stop_number" optional="hide"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

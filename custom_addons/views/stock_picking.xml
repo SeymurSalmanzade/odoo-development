@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="stock_view_picking_form_inherit_custom_addons" model="ir.ui.view">
+            <field name="name">stock.picking.view.form.inherit.custom_addons</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="ygb_ref" groups="custom_addons.group_custom_azerbaijan_user"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

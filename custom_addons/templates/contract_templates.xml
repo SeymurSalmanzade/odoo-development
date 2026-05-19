@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <template id="contract_template_raw">
+            <t t-call="web.html_container">
+                <t t-set="lang" t-value="'az_AZ'"/>
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="custom_addons.contract_template" t-lang="lang"/>
+
+                    <t t-if="doc.addendum_template_id" t-call="custom_addons.addendum_template" t-lang="lang"/>
+
+                    <t t-if="doc.contract_type == 'service'" t-call="custom_addons.annex_raw" t-lang="lang">
+                        <t t-set="is_annexes_to_contract" t-value="True"/>
+                        <t t-set="sale_order" t-value="doc"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="contract_template">
+                <t t-call="web.html_container">
+                    <t t-call="custom_addons.contract_layout">
+                        <t t-set="doc" t-value="doc.with_context(lang='az_AZ')"/>
+                        <t t-if="doc.contract_template_id.arch" t-out="doc.render_custom_template(doc, doc.contract_template_id.arch)" />
+                    </t>
+                </t>
+        </template>
+        
+        <template id="addendum_template">
+            <t t-call="web.html_container">
+                <t t-call="custom_addons.addendum_layout">
+                    <t t-set="doc" t-value="doc.with_context(lang='az_AZ')"/>
+                    <t t-if="doc.addendum_template_id.arch" t-out="doc.render_custom_template(doc, doc.addendum_template_id.arch)" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>
